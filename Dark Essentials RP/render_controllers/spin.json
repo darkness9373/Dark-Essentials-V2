@@ -1,0 +1,25 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.spin": {
+			"arrays": {
+				"textures": {
+				  "array.frames": [
+					"texture.spin1",
+					"texture.spin2",
+					"texture.spin3"
+					]
+				}
+			},
+			"geometry": "geometry.spin",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"temp.life_time=query.life_time*15.0;return array.frames[temp.life_time];"
+			]
+		}
+	}
+}

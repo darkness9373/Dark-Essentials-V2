@@ -1,0 +1,773 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.grayson.dash": {
+      "animation_length": 6,
+      "timeline": {
+        "0.0": [
+          "/tag @s add grs1",
+          "/summon new:maju_glacivon ^ ^ ^-0.2",
+          "/summon custom:dash_grayson ~~~ facing ^^^1000",
+          "/playsound items.dash_grayson @a[r=40]",
+          "/effect @s slowness 1 2 true",
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "0.1": [
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "0.2": [
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "0.4": [
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "0.6": [
+          "/playsound items.grayson_attack @a[r=40]",
+          "/playsound claw_slash @a[r=40]",
+          "/damage @e[r=3,tag=!grs1,family=!damage,type=!item,family=!can_ride] 16 entity_attack",
+          "/summon custom:grayson_right_slash ~~~ facing ^^^1000",
+          "/playsound items.grayson_attack @a[r=40]",
+          "/playsound claw_slash @a[r=40]",
+          "/damage @e[r=3,tag=!grs1,family=!damage,type=!item,family=!can_ride] 16 entity_attack",
+          "/summon custom:grayson_left_slash ~~~ facing ^^^1000",
+          "/execute at @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!grs1,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut", 
+          "/execute at @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!grs1,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut", 
+          "/scoreboard players add @e[r=3,c=2,tag=!grs1,family=!damage,type=!item,family=!can_ride,family=!inanimate] gray 1",
+          "/execute at @e[scores={gray=4}] run playsound claw_slash @a[r=20]",
+          "/effect @e[r=3,c=2,scores={gray=4}] slowness 2 2 true",
+          "/effect @e[r=3,c=2,scores={gray=4}] wither 2 2 true",
+          "/execute at @e[r=3,c=4,tag=!grs1,family=!damage,family=!can_ride,type=!item,type=!xp_orb,family=!inanimate] run particle new:grayson_impact ~ ~ ~",
+          "/execute at @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!grs1,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~",
+          "/execute at @e[scores={gray=4}] run particle new:grayson_impact ~ ~ ~",
+          "/scoreboard players set @e[r=3,c=2,scores={gray=4}] gray 0",
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "1.0": [
+          "/title @s actionbar §a████§f██████ §eYou must wait 4 second",
+          "/tag @s remove grs1"
+        ],
+        "4.0": [
+          "/title @s actionbar §a██████████ §eYou must wait 1 second"
+        ],
+        "5.0": [
+        "/scoreboard players set @p grayson1 2"
+        ]
+      }
+    },
+    "animation.grayson.slice": {
+      "animation_length": 9,
+      "timeline": {
+        "0.0": [
+           "/tag @p add dd",
+            "/summon custom:grayson_right_slash_big ~~~ facing ^^^1000",
+            "/summon custom:grayson_right_slash ~~~ facing ^^^1000",
+            "/particle new:grayson ~ ~ ~", 
+            "/summon custom:beckstep ~~~ facing ^^^1000",
+            "/playsound items.grayson_attack @a[r=30]",
+            "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!dd,c=4,r=5] run particle new:grayson_impact",
+            "/damage @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!dd] 8",
+            "/execute at @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!dd,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut", 
+             "/particle new:grayson ~ ~ ~", 
+            "/particle new:grayson_impact ~ ~ ~"
+        ],
+		"0.5": [    
+		    "/summon custom:grayson_left_slash_big ~~~ facing ^^^1000",
+		    "/summon custom:grayson_left_slash ~~~ facing ^^^1000",
+		    "/particle new:grayson ~ ~ ~", 
+		    "/summon custom:beckstep ~~~ facing ^^^1000",
+            "/playsound items.grayson_attack @a[r=30]",
+            "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!dd,c=4,r=5] run particle new:grayson_impact",
+            "/damage @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!dd] 8",
+            "/execute at @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!dd,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut", 
+            "/particle new:grayson ~ ~ ~", 
+            "/particle new:grayson_impact ~ ~ ~"
+        ],
+		"1.0": [    
+            "/summon custom:grayson_right_slash_big ~~~ facing ^^^1000",
+            "/summon custom:grayson_right_slash ~~~ facing ^^^1000",
+            "/particle new:grayson ~ ~ ~", 
+            "/summon custom:beckstep ~~~ facing ^^^1000",
+            "/playsound items.grayson_attack @a[r=30]",
+            "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!dd,c=4,r=5] run particle new:grayson_impact",
+            "/damage @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!dd] 8",
+            "/execute at @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!dd,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut", 
+            "/particle new:grayson ~ ~ ~", 
+            "/particle new:grayson_impact ~ ~ ~"
+        ],
+		"1.5": [    
+		    "/summon custom:grayson_left_slash_big ~~~ facing ^^^1000",
+		    "/summon custom:grayson_left_slash ~~~ facing ^^^1000",
+		    "/particle new:grayson ~ ~ ~", 
+		    "/summon custom:beckstep ~~~ facing ^^^1000",
+            "/playsound items.grayson_attack @a[r=30]",
+            "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!dd,c=4,r=5] run particle new:grayson_impact",
+            "/damage @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!dd] 8",
+            "/execute at @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!dd,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut", 
+            "/particle new:grayson ~ ~ ~", 
+            "/particle new:grayson_impact ~ ~ ~"
+        ],
+		"2.0": [    
+            "/summon custom:grayson_right_slash_big ~~~ facing ^^^1000",
+            "/summon custom:grayson_right_slash ~~~ facing ^^^1000",
+            "/particle new:grayson ~ ~ ~", 
+            "/summon custom:beckstep ~~~ facing ^^^1000",
+            "/playsound items.grayson_attack @a[r=30]",
+            "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!dd,c=4,r=5] run particle new:grayson_impact",
+            "/damage @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!dd] 8",
+            "/execute at @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!dd,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut", 
+            "/particle new:grayson ~ ~ ~", 
+            "/particle new:grayson_impact ~ ~ ~"
+        ],
+		"2.5": [    
+		    "/summon custom:grayson_left_slash_big ~~~ facing ^^^1000",
+		   "/summon custom:grayson_left_slash ~~~ facing ^^^1000",
+		   "/particle new:grayson ~ ~ ~", 
+		   "/summon custom:beckstep ~~~ facing ^^^1000",
+            "/playsound items.grayson_attack @a[r=30]",
+            "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!dd,c=4,r=5] run particle new:grayson_impact",
+            "/damage @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!dd] 8",
+            "/execute at @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!dd,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut", 
+            "/particle new:grayson ~ ~ ~", 
+            "/particle new:grayson_impact ~ ~ ~"
+        ],
+		"3.0": [    
+           "/summon custom:grayson_right_slash_big ~~~ facing ^^^1000",
+           "/summon custom:grayson_right_slash ~~~ facing ^^^1000",
+           "/particle new:grayson ~ ~ ~", 
+           "/summon custom:beckstep ~~~ facing ^^^1000",
+           "/playsound items.grayson_attack @a[r=30]",
+           "/summon custom:grayson_left_slash_big ~~~ facing ^^^1000",
+           "/summon custom:grayson_left_slash ~~~ facing ^^^1000",
+           "/particle new:grayson ~ ~ ~", 
+           "/summon custom:beckstep ~~~ facing ^^^1000",
+           "/playsound items.grayson_attack @a[r=30]",
+           "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!dd,c=4,r=5] run particle new:grayson_impact",
+           "/damage @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!dd] 10",
+           "/execute at @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!dd,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+           "/execute at @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!dd,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~",
+           "/particle new:grayson ~ ~ ~", 
+           "/particle rpg:impact ~ ~ ~", 
+           "/particle new:grayson_impact ~ ~ ~"
+        ],
+		"3.7": [    
+            "/tag @p remove dd"
+        ],
+		"4.5": [
+		"/title @s actionbar §a§f██████████ §eYou must wait 7.0 second before casting this spell."
+		],
+		"5.0": [
+		"/title @s actionbar §a██§f████████ §eYou must wait 6.0 second before casting this spell."
+	    ],
+	    "5.5": [
+		"/title @s actionbar §a███§f███████ §eYou must wait 5.0 second before casting this spell."
+		],
+		"6.0": [
+		"/title @s actionbar §a█████§f█████ §eYou must wait 4.0 second before casting this spell."
+	    ],
+		"6.5": [
+		"/title @s actionbar §a██████§f████ §eYou must wait 3.0 second before casting this spell."
+		],
+		"7.0": [
+		"/title @s actionbar §a████████§f██ §eYou must wait 2.0 second before casting this spell."
+		],
+		"7.5": [
+		"/title @s actionbar §a██████████ §eYou must wait 1.0 second before casting this spell."
+        ],
+        "8.0": "/scoreboard players set @p grayson2 2"
+      }
+    },
+    "animation.grayson.shadow.walk": {
+      "animation_length": 20,
+      "timeline": {
+        "0.0": [
+          "/gamerule falldamage false",
+          "/tag @s add sww",
+          "/execute at @s[tag=sww] positioned ~ ~ ~ run summon custom:beckstep ~ ~ ~",
+          "/execute at @s[tag=sww] positioned ~ ~ ~ run particle custom:dash_particle ~ ~ ~",
+          "/effect @s[tag=sww] invisibility 99999 255 true",
+          "/effect @s[tag=sww] instant_health 99999 255 true",
+          "/playanimation @s animation.player.vanish I 99999",
+          "/effect @s[tag=sww] speed 30 4 true",
+          "/execute at @s[tag=sww] positioned ~ ~ ~ run playsound items.walkkk @a[r=30] ~ ~ ~"
+        ],
+        "5.0": [
+          "/gamerule falldamage true"
+        ],
+        "9.0": [
+          "/execute at @s[tag=sww] positioned ~ ~ ~ run particle custom:dash_particle ~ ~ ~"
+       ],
+        "10.0": [
+           "/summon custom:grayson_right_slash_big ~~~ facing ^^^1000",
+           "/summon custom:grayson_right_slash ~~~ facing ^^^1000",
+           "/particle new:grayson ~ ~ ~", 
+           "/summon custom:beckstep ~~~ facing ^^^1000",
+           "/playsound items.grayson_attack @a[r=30]",
+           "/summon custom:grayson_left_slash_big ~~~ facing ^^^1000",
+           "/summon custom:grayson_left_slash ~~~ facing ^^^1000",
+           "/particle new:grayson ~ ~ ~", 
+           "/summon custom:beckstep ~~~ facing ^^^1000",
+           "/playsound items.grayson_attack @a[r=30]",
+           "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!dd,c=4,r=5] run particle new:grayson_impact",
+           "/damage @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!dd] 10",
+           "/execute at @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!dd,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+           "/execute at @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!custom:beckstep,type=!armor_stand,type=!item,type=!xp_orb,tag=!dd,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~",
+           "/particle new:grayson ~ ~ ~", 
+           "/particle rpg:impact ~ ~ ~", 
+           "/particle new:grayson_impact ~ ~ ~", 
+           "/playanimation @s animation.player.vanish I 0",
+           "/execute at @s[tag=sww] positioned ~ ~ ~ run particle custom:dash_particle ~ ~ ~",
+           "/effect @s[tag=sww] speed 0 0 true",
+           "/effect @s[tag=sww] instant_health 0 0 true",
+           "/effect @s[tag=sww] invisibility 0 0 true",
+           "/tag @s remove sww"
+	    ],
+	    "11.0": [
+		"/title @s actionbar §a███§f███████ §eYou must wait 10.0 second before casting this spell."
+		],
+		"13.0": [
+		"/title @s actionbar §a█████§f█████ §eYou must wait 8.0 second before casting this spell."
+	    ],
+		"15.0": [
+		"/title @s actionbar §a██████§f████ §eYou must wait 6.0 second before casting this spell."
+		],
+		"17.0": [
+		"/title @s actionbar §a████████§f██ §eYou must wait 4.0 second before casting this spell."
+		],
+		"19.0": [
+		"/title @s actionbar §a██████████ §eYou must wait 2.0 second before casting this spell."
+	    ],
+        "19.5": "/scoreboard players set @p grayson3 2"
+      }
+    },
+    "animation.grayson_spinn": {
+      "animation_length": 25.5,
+      "timeline": {
+        "0.0": [
+          "/particle new:torrent1",
+          "/playsound items.walkkk @a[r=30] ~~~ 100 0.8",
+          "/particle new:torrent_stand",
+          "/tag @p add tt",
+          "/tag @e[r=7,tag=!tt,family=!damage,family=!can_ride] add merek",
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/playsound items.spinnnn @a[r=30] ~~~", 
+          "/particle rpg:impact ~ ~ ~", 
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!tt,c=4,r=5] run particle new:grayson_impact",
+          "/damage @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!tt] 10",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~"
+
+        ],
+        "0.0417": "/particle new:torrent2",
+        "0.0833": [
+          "/particle new:torrent3",
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/playsound items.spinnnn @a[r=30] ~~~", 
+          "/particle rpg:impact ~ ~ ~", 
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!tt,c=4,r=5] run particle new:grayson_impact",
+          "/damage @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!tt] 10",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~", 
+          "/particle new:torrent_stand"
+        ],
+        "0.125": "/particle new:torrent4",
+        "0.1667": [
+          "/particle new:torrent5",
+          "/particle new:torrent_stand"
+        ],
+        "0.2083": "/particle new:torrent6",
+        "0.25": [
+          "/particle new:torrent_stand",
+          "/particle new:torrent7"
+        ],
+        "0.2917": "/particle new:torrent8",
+        "0.3333": "/particle new:torrent9",
+        "0.375": "/particle new:torrent10",
+        "0.4167": "/particle new:torrent11",
+        "0.4583": "/particle new:torrent12",
+        "0.5": [
+          "/particle new:torrent_stand",
+         "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/playsound items.spinnnn @a[r=30] ~~~", 
+          "/particle rpg:impact ~ ~ ~", 
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!tt,c=4,r=5] run particle new:grayson_impact",
+          "/damage @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!tt] 10",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~"
+        ],
+        "0.75": [
+          "/particle new:torrent_stand",
+          "/playsound items.spinnnn @a[r=30] ~~~ 100 0.8"
+        ],
+        "1.0": [
+          "/particle new:torrent_stand",
+          "/particle new:torrent1",
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/playsound items.spinnnn @a[r=30] ~~~", 
+          "/particle rpg:impact ~ ~ ~", 
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!tt,c=4,r=5] run particle new:grayson_impact",
+          "/damage @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!tt] 10",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~"
+        ],
+        "1.0417": "/particle new:torrent2",
+        "1.0833": "/particle new:torrent3",
+        "1.125": "/particle new:torrent4",
+        "1.1667": "/particle new:torrent5",
+        "1.2083": "/particle new:torrent6",
+        "1.25": [
+          "/particle new:torrent_stand",
+          "/particle new:torrent7",
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/playsound items.spinnnn @a[r=30] ~~~", 
+          "/particle rpg:impact ~ ~ ~", 
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!tt,c=4,r=5] run particle new:grayson_impact",
+          "/damage @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!tt] 10",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~"
+        ],
+        "1.2917": "/particle new:torrent8",
+        "1.3333": "/particle new:torrent9",
+        "1.375": "/particle new:torrent10",
+        "1.4167": "/particle new:torrent11",
+        "1.4583": "/particle new:torrent12",
+        "1.5": [
+          "/particle new:torrent_stand",
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/playsound items.spinnnn @a[r=30] ~~~", 
+          "/particle rpg:impact ~ ~ ~", 
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!tt,c=4,r=5] run particle new:grayson_impact",
+          "/damage @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!tt] 10",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~"
+        ],
+        "1.75": [
+          "/particle new:torrent_stand",
+          "/playsound items.spinnnn @a[r=30] ~~~ 100 0.8"
+        ],
+        "2.0": [
+          "/particle new:torrent_stand",
+          "/particle new:torrent1",
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/playsound items.spinnnn @a[r=30] ~~~", 
+          "/particle rpg:impact ~ ~ ~", 
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!tt,c=4,r=5] run particle new:grayson_impact",
+          "/damage @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!tt] 10",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~"
+        ],
+        "2.0417": "/particle new:torrent2",
+        "2.0833": "/particle new:torrent3",
+        "2.125": "/particle new:torrent4",
+        "2.1667": "/particle new:torrent5",
+        "2.2083": "/particle new:torrent6",
+        "2.25": [
+          "/particle new:torrent_stand",
+          "/particle new:torrent7",
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/playsound items.spinnnn @a[r=30] ~~~", 
+          "/particle rpg:impact ~ ~ ~", 
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!tt,c=4,r=5] run particle new:grayson_impact",
+          "/damage @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!tt] 10",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~"
+        ],
+        "2.2917": "/particle new:torrent8",
+        "2.3333": "/particle new:torrent9",
+        "2.375": "/particle new:torrent10",
+        "2.4167": "/particle new:torrent11",
+        "2.4583": "/particle new:torrent12",
+        "2.5": [
+          "/particle new:torrent_stand",
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/playsound items.spinnnn @a[r=30] ~~~", 
+          "/particle rpg:impact ~ ~ ~", 
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!tt,c=4,r=5] run particle new:grayson_impact",
+          "/damage @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!tt] 10",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~"
+
+        ],
+        "2.75": [
+          "/particle new:torrent_stand",
+          "/playsound items.spinnnn @a[r=30] ~~~ 100 0.8"
+        ],
+        "3.0": [
+          "/tag @e[r=7] remove merek",
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/playsound items.spinnnn @a[r=30] ~~~", 
+          "/particle rpg:impact ~ ~ ~", 
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!tt,c=4,r=5] run particle new:grayson_impact",
+          "/damage @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!tt] 10",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~", 
+          "/damage @e[r=7,tag=!tt,family=!damage] 10",
+          "/summon custom:grayson_right_slash_big ~~~ facing ^^^1000",
+           "/summon custom:grayson_right_slash ~~~ facing ^^^1000",
+           "/particle new:grayson ~ ~ ~", 
+           "/summon custom:beckstep ~~~ facing ^^^1000",
+           "/playsound items.grayson_attack @a[r=30]",
+           "/summon custom:grayson_left_slash_big ~~~ facing ^^^1000",
+           "/summon custom:grayson_left_slash ~~~ facing ^^^1000",
+           "/particle new:grayson ~ ~ ~", 
+           "/summon custom:beckstep ~~~ facing ^^^1000",
+           "/playsound items.grayson_attack @a[r=30]",
+           "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!tt,c=4,r=5] run particle new:grayson_impact",
+           "/damage @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!tt] 10",
+           "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+           "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!tt,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~",
+           "/particle new:grayson ~ ~ ~", 
+           "/particle rpg:impact ~ ~ ~", 
+           "/particle new:grayson_impact ~ ~ ~", 
+          "/playsound mob.warden.sonic_boom @a[r=30] ~~~ 100 0.8"
+        ],
+        "3.1": [
+          "/title @s actionbar §a█§f█████████ §eYou must wait 17 second", 
+          "/tag @s remove tt"
+        ],
+        "10.1": [
+          "/title @s actionbar §a███§f███████ §eYou must wait 10 second"
+        ],
+        "23.1": [
+          "/title @s actionbar §a██████████ §eYou must wait 1 second"
+        ],
+        "24.75": "/tag @p remove ss",
+        "25.0": "/scoreboard players set @p grayson4 2"
+      }
+    },
+    "animation.grayson.end.slash": {
+      "animation_length": 26,
+      "timeline": {
+        "0.0": [
+          "/tag @s add fa",
+         "/gamerule falldamage false",
+          "/playsound items.walkkk @a[r=30]",
+          "/particle custom:death_mark ~ ~ ~", 
+          "/particle new:grayson ~ ~ ~", 
+          "/particle rpg:impact ~ ~ ~", 
+          "/particle new:grayson_impact ~ ~ ~", 
+          "/execute at @s[tag=fa] positioned ~ ~ ~ run summon custom:beckstep ~ ~ ~"
+        ],
+        "0.3": [
+          "/execute at @s[tag=fa] run summon custom:deaspin ^^^-2",
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "0.35": [
+          "/execute at @s[tag=fa] run summon custom:deaspin ^^^-2"
+        ],
+        "0.4": [
+          "/execute at @s[tag=fa] run summon custom:deaspin ^^^-2",
+          "/particle new:grayson_impact ~ ~ ~", 
+          "/execute at @s[tag=fa] positioned ~ ~ ~ run summon custom:beckstep ~ ~ ~"
+        ],
+        "0.45": [
+          "/execute at @s[tag=fa] run summon custom:deaspin ^^^-2"
+        ],
+        "0.5": [
+          "/particle new:grayson_impact ~ ~ ~",
+          "/execute at @s[tag=fa] run summon custom:deaspin ^^^-2"
+        ],
+        "0.55": [
+          "/execute at @s[tag=fa] run summon custom:deaspin ^^^-2",
+          "/tag @s remove fa",
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "0.6": [
+          "/effect @s instant_health 99999 255",
+          "/playsound items.spinnnn @a[r=30] ~ ~ ~ 1 0.8",
+          "/particle new:grayson_impact ~ ~ ~",
+          "/tag @s add fa",
+          "/execute at @s positioned ^ ^ ^2 run damage @e[tag=!passive,tag=!fa,r=5,type=!item,type=!armor_stand] 1 sonic_boom entity @s",
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/summon custom:grayson_right_slash_big ~~~ facing ^^^1000",
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!fa,c=4,r=5] run particle new:grayson_impact",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!fa,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+           "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!fa,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~"
+        ],
+        "0.7": [
+          "/particle new:grayson_impact ~ ~ ~" 
+        ],
+        "0.8": [
+          "/playsound items.spinnnn @a[r=30] ~ ~ ~ 1 0.9",
+          "/particle new:grayson_impact ~ ~ ~",
+          "/execute at @s positioned ^ ^ ^2 run damage @e[tag=!passive,tag=!fa,r=5,type=!item,type=!armor_stand] 1 sonic_boom entity @s",
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/summon custom:grayson_left_slash_big ~~~ facing ^^^1000",
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!fa,c=4,r=5] run particle new:grayson_impact",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!fa,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+           "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!fa,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~"
+        ],
+        "0.9": [
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "1.0": [
+          "/playsound items.spinnnn @a[r=30] ~ ~ ~ 1 0.9",
+          "/particle new:grayson_impact ~ ~ ~",
+          "/execute at @s positioned ^ ^ ^2 run damage @e[tag=!passive,tag=!fa,r=5,type=!item,type=!armor_stand] 1 sonic_boom entity @s",
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/summon custom:grayson_right_slash_big ~~~ facing ^^^1000",
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!fa,c=4,r=5] run particle new:grayson_impact",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!fa,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+           "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!fa,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~"
+        ],
+        "1.1": [
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "1.2": [
+        "/playsound items.spinnnn @a[r=30] ~ ~ ~ 1 0.9",
+          "/particle new:grayson_impact ~ ~ ~",
+          "/execute at @s positioned ^ ^ ^2 run damage @e[tag=!passive,tag=!fa,r=5,type=!item,type=!armor_stand] 1 sonic_boom entity @s",
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/summon custom:grayson_left_slash_big ~~~ facing ^^^1000",
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!fa,c=4,r=5] run particle new:grayson_impact",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!fa,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+           "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!fa,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~"
+        ],
+        "1.3": [
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "1.4": [
+          "/gamerule commandfeedback false",
+          "/playsound items.spinnnn @a[r=30] ~ ~ ~ 1 0.9",
+          "/particle new:grayson_impact ~ ~ ~",
+          "/execute at @s positioned ^ ^ ^2 run damage @e[tag=!passive,tag=!fa,r=5,type=!item,type=!armor_stand] 1 sonic_boom entity @s",
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/summon custom:grayson_right_slash_big ~~~ facing ^^^1000",
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!fa,c=4,r=5] run particle new:grayson_impact",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!fa,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+           "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!fa,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~", 
+           "/tag @s remove fa"
+        ],
+        "1.5": [
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "1.6": [
+          "/particle new:grayson_impact ~ ~ ~",
+          "/summon custom:grayson_spin ~ ~ ~",
+          "/effect @s slowness 0 0 true",
+          "/tag @s add nfy",
+          "/effect @s instant_health 99999 255",
+          "/effect @s levitation 1 18 true",
+          "/summon custom:grayson_right_slash_big ~~~ facing ^^^1000",
+           "/summon custom:grayson_right_slash ~~~ facing ^^^1000",
+           "/particle new:grayson ~ ~ ~", 
+           "/summon custom:beckstep ~~~ facing ^^^1000",
+           "/playsound items.grayson_attack @a[r=30]",
+           "/summon custom:grayson_left_slash_big ~~~ facing ^^^1000",
+           "/summon custom:grayson_left_slash ~~~ facing ^^^1000",
+           "/particle new:grayson ~ ~ ~", 
+           "/summon custom:beckstep ~~~ facing ^^^1000",
+           "/playsound items.grayson_attack @a[r=30]",
+           "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!nfy,c=4,r=5] run particle new:grayson_impact",
+           "/damage @e[type=!custom:beckstep,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!nfy] 10",
+           "/execute at @e[type=!custom:beckstep,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!nfy,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+           "/execute at @e[type=!custom:beckstep,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!custom:beckstep,type=!armor_stand,type=!item,type=!xp_orb,tag=!nfy,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~",
+           "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/effect @e[r=7,type=!armor_stand,tag=!nfy] blindness 5 5 true",
+         "/effect @e[r=7,type=!armor_stand,tag=!nfy] slowness 5 5 true",
+          "/playsound items.death_charge_spin2 @a[r=30] ~ ~ ~ 1 0.8",
+          "/effect @e[tag=!nfy,r=7,type=!custom:beckstep,type=!custom:grayson_left_slash_big,type=!custom:grayson_left_slash,type=!custom:grayson_right_slash,type=!custom:grayson_right_slash_big,type=!item,type=!xp_orb,family=!damage,type=!armor_stand] levitation 1 23 true",
+          "/tag @s remove nfy",
+          "/tag @e[r=7,type=!custom:beckstep,type=!custom:grayson_left_slash_big,type=!custom:grayson_left_slash,type=!custom:grayson_right_slash,type=!custom:grayson_right_slash_big,family=!damage,type=!item,type=!xp_orb,family=!damage,type=!armor_stand] add fy"
+        ],
+        "1.7": [
+          "/tag @s add fspin",
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/summon custom:grayson_right_slash_big ~~~ facing ^^^1000",
+          "/playsound items.spinnnn @a[r=30] ~ ~ ~ 1 0.9",
+          "/tag @s add fbs1",
+          "/damage @e[tag=!passive,tag=!fbs1,r=5,type=!item,type=!armor_stand] 6 sonic_boom entity @s",
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!fbs1,c=4,r=5] run particle new:grayson_impact",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!fbs1,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+           "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!fbs1,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~", 
+          "/tag @s remove fbs1",
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "1.8": [
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "1.9": [
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/summon custom:grayson_left_slash_big ~~~ facing ^^^1000",
+          "/playsound items.spinnnn @a[r=30]",
+          "/tag @s add fbs2",
+          "/damage @e[tag=!passive,tag=!fbs2,r=5,type=!item,type=!armor_stand] 6 sonic_boom entity @s",
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!fbs2,c=4,r=5] run particle new:grayson_impact",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!fbs2,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+           "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!fbs2,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~", 
+          "/tag @s remove fbs2",
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "2.0": [
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "2.1": [
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/summon custom:grayson_right_slash_big ~~~ facing ^^^1000",
+          "/playsound items.spinnnn @a[r=30] ~ ~ ~ 1 1.1",
+          "/particle new:grayson_impact ~ ~ ~",
+          "/effect @e[r=9] levitation 0 0 true",
+          "/effect @e[tag=fy] levitation 0 0 true",
+          "/tag @e[tag=fy] remove fy",
+          "/tag @s remove fspin",
+          "/tag @s add uhuy",
+          "/tp @e[type=custom:grayson_spin,c=1,r=30] ~ ~ ~",
+          "/summon custom:grayson_right_slash ^^1^1",
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!uhuy,c=4,r=5] run particle new:grayson_impact",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!uhuy,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!uhuy,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~", 
+          "/execute at @e[r=8,family=!damage,type=!custom:grayson_spin] run tp @e[r=0.5] ~ ~ ~"
+        ],
+        "2.2": [
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/summon custom:grayson_left_slash_big ~~~ facing ^^^1000",
+          "/tag @s add fbd1",
+          "/damage @e[tag=!passive,tag=!fbd1,r=5,type=!item,type=!armor_stand] 6 sonic_boom entity @s",
+          "/tag @s remove fbd1",
+          "/playsound items.spinnnn @a[r=30] ~ ~ ~ 1 1.1",
+          "/summon custom:grayson_left_slash ^^^1",
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!uhuy,c=4,r=5] run particle new:grayson_impact",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!uhuy,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!uhuy,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~", 
+          "/tp @e[type=custom:grayson_spin,c=1,r=30] ~ ~ ~",
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "2.3": [
+          "/tp @e[type=custom:grayson_spin,c=1,r=30] ~ ~ ~",
+          "/execute at @e[r=8,family=!damage,type=!custom:grayson_spin] run tp @e[r=0.5] ~ ~ ~",
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "2.4": [
+          "/execute at @e[r=8,family=!damage,type=!custom:forbidden_spin] run tp @e[r=0.5] ~ ~ ~",
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/summon custom:grayson_right_slash_big ~~~ facing ^^^1000",
+          "/playsound items.spinnnn @a[r=30] ~ ~ ~ 1 1.1",
+          "/execute at @s positioned ^ ^ ^2 run damage @e[tag=!passive,tag=!uhuy,r=5,type=!item,type=!armor_stand] 1 sonic_boom entity @s",
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!uhuy,c=4,r=5] run particle new:grayson_impact",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!uhuy,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!uhuy,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~", 
+          "/tag @s remove uhuy",
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "2.5": [
+          "/tp @e[type=custom:grayson_spin,c=1,r=30] ~ ~ ~",
+          "/tag @s add fbd2",
+          "/damage @e[tag=!passive,tag=!fbd2,r=5,type=!item,type=!armor_stand] 6 sonic_boom entity @s",
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/summon custom:grayson_left_slash_big ~~~ facing ^^^1000",
+          "/tag @s remove fbd2",
+          "/playsound items.spinnnn @a[r=30] ~ ~ ~ 1 0.9",
+          "/summon custom:grayson_right_slash_big ^^^1", 
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!fbd2,c=4,r=5] run particle new:grayson_impact",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!fbd2,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!fbd2,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~"
+        ],
+        "2.6": [
+          "/execute at @e[r=8,family=!damage,type=!custom:grayson_spin] run tp @e[r=0.5] ~ ~ ~",
+          "/tp @e[type=custom:grayson_spin] ~~~",
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "2.7": [
+         "/tp @e[type=custom:grayson_spin] ~~~",
+          "/execute at @e[r=8,family=!damage,type=!custom:grayson_spin] run tp @e[r=0.5] ~ ~ ~",
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "2.8": [
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/tag @s add fbd3",
+          "/damage @e[tag=!passive,tag=!fbd3,r=5,type=!item,type=!armor_stand] 6 sonic_boom entity @s",
+          "/tag @s remove fbd3",
+          "/playsound items.spinnnn @a[r=30]",
+          "/summon custom:grayson_left_slash_big ^^^1",
+          "/execute at @e[r=8,family=!damage,type=!custom:grayson_spin] run tp @e[r=0.5] ~ ~ ~",
+           "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!fbd2,c=4,r=5] run particle new:grayson_impact",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!fbd2,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!fbd2,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~", 
+          "/particle custom:forbidden_particle ~ ~ ~"
+        ],
+        "2.9": [
+          "/execute at @e[r=8,family=!damage,type=!custom:grayson_spin] run tp @e[r=0.5] ~ ~ ~",
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "3.0": [
+          "/execute at @e[r=8,family=!damage,type=!custom:grayson_spin] run tp @e[r=0.5] ~ ~ ~",
+          "/particle new:grayson_impact ~ ~ ~"
+        ],
+        "3.1": [
+          "/summon custom:grayson_spin ~~~ facing ^^^1000", 
+          "/execute at @e[r=8,family=!damage,type=!custom:grayson_spin] run tp @e[r=0.5] ~ ~ ~",
+          "/tag @s add fbd4",
+          "/damage @e[tag=!passive,tag=!fbd4,r=5,type=!item,type=!armor_stand] 6 sonic_boom entity @s",
+          "/tag @e[r=7,tag=!fbd4,type=!item,type=!xp_orb,family=!damage,type=!armor_stand] add cutd",
+          "/tag @s remove fbd4",
+          "/playsound items.spinnnn @a[r=60] ~ ~ ~ 1 0.8",
+          "/summon custom:grayson_spin ~ ~0.1 ~",
+           "/summon custom:spinspin ~ ~0.1~", 
+           "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!fbd2,c=4,r=5] run particle new:grayson_impact",
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!fbd2,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+          "/execute at @e[type=!custom:grayson_spin,type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!fbd2,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~", 
+          "/particle new:grayson_impact ~ ~ ~",
+          "/execute at @s run summon custom:knock_5 ~ ~ ~"
+        ],
+        "3.2": [
+          "/effect @s instant_health 0 0 true",
+        "/summon custom:spinspin ~ ~0.1~"
+        ],
+        "3.3": [
+        "/summon custom:spinspin ~ ~0.1 ~"
+        ],
+        "3.4": [
+        "/summon custom:spinspin ~ ~0.1 ~"
+        ],
+        "3.5": [
+          "/tag @s add cutek",
+          "/tag @e[r=7,tag=!cutek,type=!item,type=!custom:knock_5,type=!custom:spinspin,type=!xp_orb,family=!damage,type=!armor_stand] add cutd",
+          "/summon custom:beckstep ~~~ facing ^^^1000",
+          "/summon custom:divine_eruption ~~~ facing ^^^1000",
+          "/damage @e[tag=!passive,tag=!fbd4,r=5,type=!item,type=!armor_stand] 6 sonic_boom entity @s",
+          "/playsound items.ground_smash @a[r=60] ~ ~ ~ 1 0.8",
+          "/particle custom:forbidden_ground ~ ~ ~"
+        ],
+        "3.6": [
+          "/damage @e[tag=!passive,tag=cutd,r=50,type=!item,type=!armor_stand] 6 sonic_boom entity @s",
+          "/gamerule falldamage true",
+          "/execute at @e[r=50,tag=cutd] run playsound items.grayson_attack @a[r=20] ~ ~ ~ 1 1.1",
+          "/execute at @e[r=50,tag=cutd] run summon custom:impact_ulti ~~~"
+        ],
+        "3.9": [
+          "/damage @e[tag=!passive,tag=cutd,r=50,type=!item,type=!armor_stand] 6 sonic_boom entity @s",
+          "/execute at @e[r=50,tag=cutd] run playsound items.grayson_attack @a[r=20]",
+          "/execute at @e[r=50,tag=cutd] run summon custom:impact_ulti ~~~"
+        ],
+        "4.2": [
+          "/damage @e[tag=!passive,tag=cutd,r=50,type=!item,type=!armor_stand] 6 sonic_boom entity @s",
+          "/execute at @e[r=50,tag=cutd] run playsound items.grayson_attack @a[r=20] ~ ~ ~ 1 0.9",
+          "/execute at @e[r=50,tag=cutd] run summon custom:impact_ulti ~~~"
+        ],
+        "4.5": [
+          "/damage @e[tag=!passive,tag=cutd,r=50,type=!item,type=!armor_stand] 6 sonic_boom entity @s",
+          "/execute at @e[r=50,tag=cutd] run playsound items.grayson_attack @a[r=20] ~ ~ ~ 1 0.9",
+          "/execute at @e[r=50,tag=cutd] run summon custom:impact_ulti ~~~"
+        ],
+        "4.8": [
+          "/damage @e[tag=!passive,tag=cutd,r=50,type=!item,type=!armor_stand] 6 sonic_boom entity @s",
+          "/execute at @e[r=50,tag=cutd] run playsound items.grayson_attack @a[r=20] ~ ~ ~ 1 0.8",
+          "/execute at @e[r=50,tag=cutd] run summon custom:impact_ulti ~~~",
+          "/tag @e[tag=cutd] remove cutd"
+        ],
+        "5.0": [
+          "/tag @s remove cutek"
+        ],
+   	    "5.5": [
+         "/title @s actionbar §a█§f█████████ §eYou must wait 20 second"
+        ],
+        "15.5": [
+        "/title @s actionbar §a███§f███████ §eYou must wait 10 second"
+        ],
+        "25.5": [
+        "/title @s actionbar §a██████████ §eYou must wait 1 second"
+        ],
+        "25.25": "/scoreboard players set @p grayson5 2"
+      }
+    }
+  }
+}

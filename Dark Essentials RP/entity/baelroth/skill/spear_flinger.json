@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "custom:spear_flinger",
+      "materials": {
+        "default": "enderman"
+      },
+      "textures": {
+        "default": "textures/entity/baelroth_spear/spear_skill"
+      },
+      "geometry": {
+        "default": "geometry.spear_flinger"
+      },
+      "scripts": {
+				"animate": [
+					"controller"
+				]
+			},
+			"animations": {
+				"controller": "controller.animation.chain.general",
+				"spawned": "animation.spear_finger"
+	  },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

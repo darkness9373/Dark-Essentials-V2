@@ -1,0 +1,18 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.hoe": {
+			"loop": true,
+			"animation_length": 5.5625,
+			"bones": {
+				"rightArm": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.125": [0, -20, 0],
+						"0.3125": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

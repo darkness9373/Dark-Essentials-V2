@@ -1,0 +1,48 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.glacivon_dash",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 14,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "h_bone",
+					"pivot": [0, 15, -53],
+					"rotation": [0, 0, 45],
+					"cubes": [
+						{
+							"origin": [-30.73125, 15.01875, -114.5],
+							"size": [61.5, 0, 123],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [0, 16], "uv_rotation": 90},
+								"east": {"uv": [0, 68], "uv_size": [0, -52], "uv_rotation": 270},
+								"south": {"uv": [0, 0], "uv_size": [0, 16], "uv_rotation": 270},
+								"west": {"uv": [0, 0], "uv_size": [0, 16], "uv_rotation": 270},
+								"up": {"uv": [128, 88], "uv_size": [-128, -52], "uv_rotation": 270},
+								"down": {"uv": [128, 128], "uv_size": [-128, 0], "uv_rotation": 270}
+							}
+						},
+						{
+							"origin": [-0.01875, -15.76875, -114.5],
+							"size": [0, 61.5, 123],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [0, 16]},
+								"east": {"uv": [128, 128], "uv_size": [-128, 0]},
+								"south": {"uv": [0, 0], "uv_size": [0, 16]},
+								"west": {"uv": [128, 36], "uv_size": [-128, 52]},
+								"up": {"uv": [0, 16], "uv_size": [0, -16]},
+								"down": {"uv": [0, 16], "uv_size": [0, 55]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

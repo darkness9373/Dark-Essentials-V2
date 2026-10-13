@@ -1,0 +1,448 @@
+{
+    "$schema": "https://kalmemarq.github.io/Bugrock-JSON-UI-Schemas/ui.schema.json",
+    "namespace": "hud",
+    "hud_title_text/title_frame/title_background": {
+        "modifications": [
+            {
+                "array_name": "bindings",
+                "operation": "insert_back",
+                "value": [
+                    {
+                        "binding_name": "#hud_title_text_string"
+                    },
+                    {
+                        "binding_type": "view",
+                        "source_property_name": "((#hud_title_text_string - '§s§i§d§e') = #hud_title_text_string)",
+                        "target_property_name": "#visible"
+                    }
+                ]
+            }
+        ]
+    },
+    "hud_title_text/title_frame/title": {
+        "modifications": [
+            {
+                "array_name": "bindings",
+                "operation": "insert_back",
+                "value": {
+                    "binding_type": "view",
+                    "source_property_name": "((#text - '§s§i§d§e') = #text)",
+                    "target_property_name": "#visible"
+                }
+            }
+        ]
+    },
+    "sidebar_text": {
+        "type": "label",
+        "text": "#text",
+        "layer": 2,
+        "alpha": 1,
+        "locked_alpha": 1,
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "offset": [
+            6,
+            4
+        ],
+        "size": [
+            "default",
+            "default"
+        ],
+        "bindings": [
+            {
+                "binding_name": "#hud_title_text_string"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#hud_title_text_string - '§s§i§d§e§b§l§a§r' - '§s§i§d§e§r§e§d§r' - '§s§i§d§e§b§l§u§r' - '§s§i§d§e§a§q§u§r' - '§s§i§d§e§l§i§m§r' - '§s§i§d§e§w§h§i§r' - '§s§i§d§e§y§e§l§r' - '§s§i§d§e§p§u§r§r' - '§s§i§d§e§o§r§a§r' - '§s§i§d§e§p§r§i' - '§s§i§d§e')",
+                "target_property_name": "#text"
+            }
+        ]
+    },
+    "dark_sidebar": {
+        "type": "panel",
+        "size": [
+            "100%cm + 12px",
+            "100%c"
+        ],
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "offset": [
+            26,
+            -40
+        ],
+        "controls": [
+            {
+                "logo": {
+                    "type": "image",
+                    "texture": "textures/darkesse/logo",
+                    "size": [
+                        90,
+                        90
+                    ],
+                    "keep_ratio": true,
+                    "layer": 2,
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "offset": [
+                        6,
+                        0
+                    ]
+                }
+            },
+            {
+                "body_black": {
+                    "type": "image",
+                    "texture": "textures/darkesse/board/black",
+                    "alpha": 0.9,
+                    "size": [
+                        "100%cm + 12px",
+                        "100%cm + 8px"
+                    ],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "offset": [
+                        0,
+                        94
+                    ],
+                    "propagate_alpha": false,
+                    "bindings": [
+                        {
+                            "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#hud_title_text_string - '§s§i§d§e§b§l§a§r') = #hud_title_text_string))",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "sidebar_text@hud.sidebar_text": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "body_red": {
+                    "type": "image",
+                    "texture": "textures/darkesse/board/red",
+                    "alpha": 0.9,
+                    "size": [
+                        "100%cm + 12px",
+                        "100%cm + 8px"
+                    ],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "offset": [
+                        0,
+                        94
+                    ],
+                    "propagate_alpha": false,
+                    "bindings": [
+                        {
+                            "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#hud_title_text_string - '§s§i§d§e§r§e§d§r') = #hud_title_text_string))",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "sidebar_text@hud.sidebar_text": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "body_blue": {
+                    "type": "image",
+                    "texture": "textures/darkesse/board/blue",
+                    "alpha": 0.9,
+                    "size": [
+                        "100%cm + 12px",
+                        "100%cm + 8px"
+                    ],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "offset": [
+                        0,
+                        94
+                    ],
+                    "propagate_alpha": false,
+                    "bindings": [
+                        {
+                            "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#hud_title_text_string - '§s§i§d§e§b§l§u§r') = #hud_title_text_string))",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "sidebar_text@hud.sidebar_text": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "body_aqua": {
+                    "type": "image",
+                    "texture": "textures/darkesse/board/aqua",
+                    "alpha": 0.9,
+                    "size": [
+                        "100%cm + 12px",
+                        "100%cm + 8px"
+                    ],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "offset": [
+                        0,
+                        94
+                    ],
+                    "propagate_alpha": false,
+                    "bindings": [
+                        {
+                            "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#hud_title_text_string - '§s§i§d§e§a§q§u§r') = #hud_title_text_string))",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "sidebar_text@hud.sidebar_text": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "body_lime": {
+                    "type": "image",
+                    "texture": "textures/darkesse/board/lime",
+                    "alpha": 0.9,
+                    "size": [
+                        "100%cm + 12px",
+                        "100%cm + 8px"
+                    ],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "offset": [
+                        0,
+                        94
+                    ],
+                    "propagate_alpha": false,
+                    "bindings": [
+                        {
+                            "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#hud_title_text_string - '§s§i§d§e§l§i§m§r') = #hud_title_text_string))",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "sidebar_text@hud.sidebar_text": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "body_white": {
+                    "type": "image",
+                    "texture": "textures/darkesse/board/white",
+                    "alpha": 0.9,
+                    "size": [
+                        "100%cm + 12px",
+                        "100%cm + 8px"
+                    ],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "offset": [
+                        0,
+                        94
+                    ],
+                    "propagate_alpha": false,
+                    "bindings": [
+                        {
+                            "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#hud_title_text_string - '§s§i§d§e§w§h§i§r') = #hud_title_text_string))",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "sidebar_text@hud.sidebar_text": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "body_yellow": {
+                    "type": "image",
+                    "texture": "textures/darkesse/board/yellow",
+                    "alpha": 0.9,
+                    "size": [
+                        "100%cm + 12px",
+                        "100%cm + 8px"
+                    ],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "offset": [
+                        0,
+                        94
+                    ],
+                    "propagate_alpha": false,
+                    "bindings": [
+                        {
+                            "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#hud_title_text_string - '§s§i§d§e§y§e§l§r') = #hud_title_text_string))",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "sidebar_text@hud.sidebar_text": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "body_purple": {
+                    "type": "image",
+                    "texture": "textures/darkesse/board/purple",
+                    "alpha": 0.9,
+                    "size": [
+                        "100%cm + 12px",
+                        "100%cm + 8px"
+                    ],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "offset": [
+                        0,
+                        94
+                    ],
+                    "propagate_alpha": false,
+                    "bindings": [
+                        {
+                            "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#hud_title_text_string - '§s§i§d§e§p§u§r§r') = #hud_title_text_string))",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "sidebar_text@hud.sidebar_text": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "body_orange": {
+                    "type": "image",
+                    "texture": "textures/darkesse/board/orange",
+                    "alpha": 0.9,
+                    "size": [
+                        "100%cm + 12px",
+                        "100%cm + 8px"
+                    ],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "offset": [
+                        0,
+                        94
+                    ],
+                    "propagate_alpha": false,
+                    "bindings": [
+                        {
+                            "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#hud_title_text_string - '§s§i§d§e§o§r§a§r') = #hud_title_text_string))",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "sidebar_text@hud.sidebar_text": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "body_prismarine": {
+                    "type": "image",
+                    "texture": "textures/darkesse/board/prismarine",
+                    "alpha": 0.9,
+                    "size": [
+                        "100%cm + 12px",
+                        "100%cm + 8px"
+                    ],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "offset": [
+                        0,
+                        94
+                    ],
+                    "propagate_alpha": false,
+                    "bindings": [
+                        {
+                            "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#hud_title_text_string - '§s§i§d§e§p§r§i') = #hud_title_text_string))",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "sidebar_text@hud.sidebar_text": {}
+                        }
+                    ]
+                }
+            }
+        ],
+        "bindings": [
+            {
+                "binding_name": "#hud_title_text_string"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not ((#hud_title_text_string - '§s§i§d§e') = #hud_title_text_string))",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "root_panel": {
+        "modifications": [
+            {
+                "array_name": "controls",
+                "operation": "insert_back",
+                "value": [
+                    {
+                        "dark_sidebar@hud.dark_sidebar": {}
+                    }
+                ]
+            }
+        ]
+    }
+}

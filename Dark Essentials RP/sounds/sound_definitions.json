@@ -1,0 +1,457 @@
+{
+   "format_version" : "1.14.0",
+   "sound_definitions" : {
+      "items.baelroth_slash1" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/baelroth/slash1" ]
+      },
+      "items.baelroth_slash2" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/baelroth/slash2" ]
+      },
+      "items.stone_break" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/baelroth/stone_break" ]
+      },
+      "items.baelroth_slash3" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/baelroth/slash3" ]
+      },
+     "items.rowr1" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/baelroth/dragon_roar_1" ]
+      },
+      "items.rowr2" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/baelroth/dragon_roar_2" ]
+      },
+      "claw_slash" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/baelroth/claw_slash" ]
+      },
+      "items.duar" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/baelroth/dragon_smash_ground" ]
+      },
+      "items.duartt" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/doombringer_axe/flamos_slash_2" ]
+      },
+      "items.auraaa" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/glacivon/auraaa" ]
+      },
+      "items.flamos_leap_1" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/baelroth/flamos_leap_1" ]
+      },
+      "items.soul_slice1" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/baelroth/soul_slice_1" ]
+      },
+      "items.soul_slice2" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/baelroth/soul_slice_2" ]
+      },
+      "items.soul_slice3" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/avarice_scythe/soul_slice_3" ]
+      },
+      "items.soul_slice4" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/avarice_scythe/soul_slice_4" ]
+      },
+      "items.death_spin" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/avarice_scythe/death_spin" ]
+      },
+      "items.summon_claw" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/avarice_scythe/summon_claw" ]
+      },
+      "items.spinnnn" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/grayson/spin" ]
+      },
+      "items.sweep" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/gw/sweep1" ]
+      },
+      "items.soul_scythe_slash" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/avarice_scythe/soul_scythe_slash" ]
+      },
+      "items.cross_slash" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/avarice_scythe/cross_slash" ]
+     },
+     "items.brutal_slash" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/warrior/warrior_slash1" ]
+     },
+     "items.brutal_slash2" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/warrior/warrior_slash2" ]
+     },
+     "items.warrior_pierce" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/warrior/warrior_pierce" ]
+     },
+     "items.whirlwind" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/warrior/whirlwind" ]
+     },
+     "void_arrow_shoot" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/null/void_arrow_shoot" ]
+     },
+     "phoenix.suara" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/glacivon/phoenix_screech" ]
+     },
+     "phoenix.summon" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/glacivon/phoenix_summon" ]
+     },
+     "void_blackhole_summon" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/null/void_blackhole_summon" ]
+     },
+     "void_blackhole" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/null/void_blackhole" ]
+     },
+     "void_pulse" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/null/void_pulse" ]
+     },
+     "void_missile" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/null/void_missile" ]
+     },
+     "items.blood_cut" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/ninja_samurai/blood_cut" ]
+     },
+     "items.walkkk" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/grayson/walk" ]
+     },
+     "items.deadly_squash_swing" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/glacivon/deadly_squash_swing" ]
+     },
+     "items.deadly_squash_punch" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/glacivon/deadly_squash_punch" ]
+     },
+     "items.deadly_squash_smash" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/glacivon/deadly_squash_smash" ]
+     },
+     "items.tanda" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/baelroth/angel_shine" ]
+     },
+     "items.soul_shut" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/ninja_samurai/death_charge_spin_1" ]
+     },
+     "items.piercing_throw" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/ninja_samurai/piercing_shuriken_throw" ]
+     },
+     "items.dash_grayson" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/grayson/dash_grayson" ]
+     },
+     "items.grayson_attack" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/grayson/blade_slash_1" ]
+     },
+     "items.glacivon.attack" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/glacivon/swing" ]
+     },
+     "items.glacivon.knock1" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/glacivon/knockback1" ]
+     }, 
+     "items.glacivon.knock2" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/glacivon/knockback2" ]
+     },
+     "items.glacivon.knock3" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/glacivon/knockback3" ]
+     }, 
+     "items.dash" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/glacivon/glacivon_step" ]
+     }, 
+     "items.tp" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/glacivon/tp" ]
+     },
+     "items.beast_emerge" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/gw/beast_emerge" ]
+     },
+     "items.thunder_sky" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/archmage/thunder_sky" ]
+     },
+     "items.arcane_thunder" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/archmage/arcane_thunder" ]
+     },
+     "items.arcane_bolt" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/archmage/arcane_bolt" ]
+     },
+     "items.archmage_magic_circle" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/archmage/archmage_magic_circle" ]
+     },
+     "items.void_slayer" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/archmage/void_slayer" ]
+     },
+     "items.void_chains_hit" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/archmage/void_chain_hit" ]
+     },
+     "items.mace_swing" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/cleric/mace_swing" ]
+     },
+     "items.mace_impact" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/cleric/mace_impact" ]
+     },
+     "items.lantern_aura" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/cleric/lantern_aura" ]
+     },
+     "items.light_wave" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/cleric/light_wave" ]
+     },
+     "items.blood_drain" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/cleric/blood_drain" ]
+     },
+     "items.tear_drop" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/cleric/tear_drop" ]
+     },
+     "items.cross_land" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/cleric/cross_land" ]
+     },
+      "items.magical_spear_shoot" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/baelroth/magical_spear_shoot" ]
+      },
+      "items.magical_spear_summon" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/baelroth/magical_spear_summon" ]
+     },
+     "items.summon_cross" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/cleric/summon_cross" ]
+     },
+     "items.summon_lantern" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/cleric/summon_lantern" ]
+     },
+     "items.dagger_slash1" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/dagger/dagger_slash1" ]
+      },
+      "items.stone_break" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/gw/stone_break" ]
+      },
+      "items.war.aura" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/war/aura" ]
+      },
+      "items.war.bong" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/war/last_stand_smash" ]
+      },
+      "items.war.swing" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/war/paladin_swing" ]
+      },
+      "items.war.smash" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/war/smash" ]
+      },
+      "items.war.spin" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/war/palspin" ]
+      },
+      "items.war.palimpek" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/war/palspin_impek" ]
+      },
+      "items.war.summon" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/war/paladin_summon" ]
+      },
+      "items.art.smash" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/dragon_warrior/dragon_pierce" ]
+      },
+      "items.art.angin" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/war/angin" ]
+      },
+      "items.over.dw" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/dragon_warrior/dw" ]
+      },
+      "items.phoenix.summon" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/war/phoenix_summon" ]
+      },
+      "items.phoenix.fire" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/war/phoenix_fire" ]
+      },
+      "items.phoenix.screech" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/war/phoenix_screech" ]
+      },
+      "items.war.cain_seal" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/warrior/chain_seal" ]
+      },
+      "items.dagger_slash2" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/dagger/dagger_slash2" ]
+      },
+      "items.shadow_walk" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/dagger/shadow_walk" ]
+      },
+      "items.dance_teleport" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/dagger/blade_dance_teleport" ]
+      },
+      "items.blade_critical" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/dagger/blade_critical" ]
+      },
+      "items.break" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/mob/zombie/woodbreak" ]
+      },
+      "items.ground_smash" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [ "sounds/baelroth/p" ]
+         },
+  	   "justice_spear" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : ["sounds/baelroth/summon_spear"]
+         },
+	  "solvayne_radiant.throw_magic" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "player",
+         "sounds" : [
+			"sounds/baelrot/throw_magic"
+		  ]
+        }
+    }
+}

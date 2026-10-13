@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "custom:glacivon_dash",
+      "materials": {
+        "default": "enderman"
+      },
+      "textures": {
+        "hdoom1": "textures/entity/glacivon_fist/glacivon_dash1",
+        "hdoom2": "textures/entity/glacivon_fist/glacivon_dash2",
+        "hdoom3": "textures/entity/glacivon_fist/glacivon_dash3",
+        "hdoom4": "textures/entity/glacivon_fist/glacivon_dash4",
+        "hdoom5": "textures/entity/glacivon_fist/glacivon_dash5",
+        "hdoom6": "textures/entity/glacivon_fist/glacivon_dash6",
+        "hdoom7": "textures/entity/glacivon_fist/glacivon_dash7",
+        "hdoom8": "textures/entity/glacivon_fist/glacivon_dash8",
+        "hdoom9": "textures/entity/glacivon_fist/glacivon_dash9",
+        "hdoom10": "textures/entity/glacivon_fist/glacivon_dash10",
+        "hdoom11": "textures/entity/glacivon_fist/glacivon_dash11",
+        "hdoom12": "textures/entity/slash/kosongg"
+      },
+      "geometry": {
+        "baelroth": "geometry.glacivon_dash"
+      },
+      "render_controllers": [
+        "controller.render.baelrothslash"
+      ]
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.attack_vault": {
+      "states": {
+        "default": {
+          "on_entry": [
+            "/tag @s remove no_delay"
+          ],
+          "on_exit": [
+            "/tag @s add no_delay"
+          ],
+          "transitions": [
+            {
+              "default2": "variable.attack_time"
+            }
+          ]
+        },
+        "default2": {
+          "on_exit": [
+            "/scoreboard players set @s zephyr_strike 0"
+          ],
+          "transitions": [
+            {
+              "gv1": "variable.attack_time && !query.is_sneaking && q.get_equipped_item_name == 'baelroth'"
+            }
+          ]
+        },
+        "gv1": {
+          "on_entry": [
+            "/summon custom:baelroth_thrust ~~~ facing ^^^1000",
+            "/summon custom:baelroth_thrust_shadow ~~~ facing ^^^1000",
+            "/effect @p levitation 1 1 true",
+            "/particle new:baelroth_slash",
+            "/summon custom:deaspin ^^^-0.2",
+            "/tag @s add gv1",
+            "/tag @s add fly",
+            "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,type=!new:dg,tag=!gv1,c=5,r=5] run particle new:gale_impact",
+            "/damage @e[type=!custom:baelroth_thrust_shadowtype=!custom:baelroth_thrust,r=5,type=!custom:vanish,type=!custom:deaspin,tag=!gv1] 5",
+            "/tag @s remove gv1"
+          ],
+          "on_exit": [
+            "/scoreboard players set @s zephyr_strike 0"
+          ],
+          "transitions": [
+            {
+              "gv2": "variable.attack_time && query.scoreboard('zephyr_strike') >= 8 && !query.is_sneaking && q.get_equipped_item_name == 'baelroth'"
+            }
+          ]
+        },
+        "gv2": {
+          "on_entry": [
+            "/summon custom:baelroth_thrust ~~~ facing ^^^1000",
+            "/summon custom:baelroth_thrust_shadow ~~~ facing ^^^1000",
+            "/effect @p levitation 1 1 true",
+            "/particle new:baelroth_slash",
+            "/summon custom:deaspin ^^^-0.2", 
+            "/tag @s add gv2",
+            "/tag @s add fly",
+            "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,type=!new:dg,tag=!gv2,c=5,r=5] run particle new:gale_impact",
+            "/damage @e[type=!custom:baelroth_thrust_shadowtype=!custom:baelroth_thrust,r=5,type=!custom:vanish,type=!custom:deaspin,tag=!gv1] 5",
+            "/tag @s remove gv2"
+          ],
+          "on_exit": [
+            "/scoreboard players set @s zephyr_strike 0"
+          ],
+          "transitions": [
+            {
+              "gv3": "variable.attack_time && query.scoreboard('zephyr_strike') >= 8 && !query.is_sneaking && q.get_equipped_item_name == 'baelroth'"
+            }
+          ]
+        },
+        "gv3": {
+          "on_entry": [
+            "/summon custom:baelroth_thrust ~~~ facing ^^^1000",
+            "/summon custom:baelroth_thrust_shadow ~~~ facing ^^^1000",
+            "/effect @p levitation 1 1 true",
+            "/particle new:baelroth_slash",
+            "/summon custom:deaspin ^^^-0.2",
+            "/tag @s add gv3",
+            "/tag @s add fly",
+            "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,type=!new:dg,tag=!gv3,c=5,r=5] run particle new:gale_impact",
+            "/damage @e[type=!custom:baelroth_thrust_shadowtype=!custom:baelroth_thrust,r=5,type=!custom:vanish,type=!custom:deaspin,tag=!gv1] 5",
+            "/tag @s remove gv3",
+            "/tag @s remove vault",
+            "/effect @p levitation 0 0 true",
+            "/tag @s remove fly"
+          ],
+          "on_exit": [
+            "/scoreboard players set @s zephyr_strike 0"
+          ],
+          "transitions": [
+            {
+              "gv1": "variable.attack_time && query.scoreboard('zephyr_strike') >= 8 && !query.is_sneaking && q.get_equipped_item_name == 'baelroth'"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

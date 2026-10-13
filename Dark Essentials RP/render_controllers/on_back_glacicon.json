@@ -1,0 +1,33 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.on_back_glacivon": {
+			"arrays": {
+				"textures": {
+					"array.textures": [
+					"texture.frame_0",
+					"texture.frame_1",
+					"texture.frame_2",
+					"texture.frame_3",
+					"texture.frame_4",
+					"texture.frame_5",
+					"texture.frame_6",
+					"texture.frame_7",
+					"texture.frame_8",
+					"texture.frame_9"
+					]
+				}
+			},
+			"geometry": "Geometry.on_back",
+			"materials": [
+				{
+					"*": "variable.is_enchanted?material.enchanted:material.default"
+				}
+			],
+			"textures": [
+				"temp.life_time=query.life_time*10;return array.textures[temp.life_time];",
+				"texture.enchanted"
+			]
+		}
+	}
+}

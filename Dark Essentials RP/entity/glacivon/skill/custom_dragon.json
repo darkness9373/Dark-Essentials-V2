@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "custom:dragon",
+      "materials": {
+        "default": "enderman"
+      },
+      "textures": {
+        "default": "textures/entity/glacivon_fist/dragon"
+      },
+      "geometry": {
+        "default": "geometry.dragon_glacivon"
+      },
+      "scripts": {
+				"animate": [
+					"controller"
+				]
+			},
+			"animations": {
+				"controller": "controller.animation.chain.general",
+				"spawned": "dragon.glacivon.animation"
+	  },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

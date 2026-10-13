@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "custom:spear_rain2",
+      "materials": {
+        "default": "enderman"
+      },
+      "textures": {
+        "default": "textures/entity/baelroth_spear/ulti"
+      },
+      "geometry": {
+        "default": "geometry.spear_rain"
+      },
+      "scripts": {
+				"animate": [
+					"controller"
+				]
+			},
+			"animations": {
+				"controller": "controller.animation.chain.general",
+				"spawned": "animation.sper.rain"
+	  },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

@@ -1,0 +1,405 @@
+{
+    "$schema": "https://kalmemarq.github.io/Bugrock-JSON-UI-Schemas/ui.schema.json",
+    "namespace": "dark_gacha",
+    "spin_root": {
+        "type": "panel",
+        "size": [285, 150],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "bindings": [
+            {
+                "binding_name": "#title_text"
+            }
+        ],
+        "controls": [
+            {
+                "bg": {
+                    "type": "image",
+                    "texture": "textures/darkesse/background",
+                    "size": ["100%", "100%"]
+                }
+            },
+            {
+                "title": {
+                    "type": "label",
+                    "text": "#title_text",
+                    "text_alignment": "center",
+                    "font_scale_factor": 1.5,
+                    "font_type": "MinecraftTen",
+                    "offset": [0, 8],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "bindings": [
+                        {
+                            "binding_name": "#title_text"
+                        }
+                    ]
+                }
+            },
+            {
+                "hint": {
+                    "type": "label",
+                    "text": "Good luck!",
+                    "text_alignment": "center",
+                    "font_scale_factor": 0.9,
+                    "offset": [0, 30],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "color": [0.75, 0.75, 0.75]
+                }
+            },
+            {
+                "reel_frame": {
+                    "type": "panel",
+                    "size": [259, 52],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "offset": [0, 48],
+                    "controls": [
+                        {
+                            "frame_bg": {
+                                "type": "image",
+                                "texture": "textures/darkesse/inner_background",
+                                "size": ["100%", "100%"]
+                            }
+                        },
+                        {
+                            "clip": {
+                                "type": "panel",
+                                "size": [231, 44],
+                                "anchor_from": "center",
+                                "anchor_to": "center",
+                                "clips_children": true,
+                                "controls": [
+                                    {
+                                        "reel_stack": {
+                                            "type": "stack_panel",
+                                            "size": ["100%", "100%"],
+                                            "orientation": "horizontal",
+                                            "anchor_from": "top_left",
+                                            "anchor_to": "top_left",
+                                            "offset": "@dark_gacha.spin_anim",
+                                            "collection_name": "form_buttons",
+                                            "controls": [
+                                                { "s1@gacha_slot": { "collection_index": 1 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s2@gacha_slot": { "collection_index": 2 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s3@gacha_slot": { "collection_index": 3 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s4@gacha_slot": { "collection_index": 4 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s5@gacha_slot": { "collection_index": 5 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s6@gacha_slot": { "collection_index": 6 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s7@gacha_slot": { "collection_index": 7 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s8@gacha_slot": { "collection_index": 8 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s9@gacha_slot": { "collection_index": 9 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s10@gacha_slot": { "collection_index": 10 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s11@gacha_slot": { "collection_index": 11 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s12@gacha_slot": { "collection_index": 12 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s13@gacha_slot": { "collection_index": 13 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s14@gacha_slot": { "collection_index": 14 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s15@gacha_slot": { "collection_index": 15 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s16@gacha_slot": { "collection_index": 16 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s17@gacha_slot": { "collection_index": 17 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s18@gacha_slot": { "collection_index": 18 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s19@gacha_slot": { "collection_index": 19 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s20@gacha_slot": { "collection_index": 20 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s21@gacha_slot": { "collection_index": 21 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s22@gacha_slot": { "collection_index": 22 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s23@gacha_slot": { "collection_index": 23 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s24@gacha_slot": { "collection_index": 24 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s25@gacha_slot": { "collection_index": 25 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s26@gacha_slot": { "collection_index": 26 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s27@gacha_slot": { "collection_index": 27 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s28@gacha_slot": { "collection_index": 28 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s29@gacha_slot": { "collection_index": 29 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s30@gacha_slot": { "collection_index": 30 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s31@gacha_slot": { "collection_index": 31 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s32@gacha_slot": { "collection_index": 32 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s33@gacha_slot": { "collection_index": 33 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s34@gacha_slot": { "collection_index": 34 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s35@gacha_slot": { "collection_index": 35 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s36@gacha_slot": { "collection_index": 36 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s37@gacha_slot": { "collection_index": 37 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s38@gacha_slot": { "collection_index": 38 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s39@gacha_slot": { "collection_index": 39 } },
+                                                { "div": { "type": "panel", "size": [8, 44] } },
+                                                { "s40@gacha_slot": { "collection_index": 40 } }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "prize_arrow": {
+                                "type": "image",
+                                "texture": "textures/darkesse/gacha_arrow",
+                                "size": [21, 21],
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "offset": [0, -6],
+                                "layer": 10
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "claim_wrap": {
+                    "type": "stack_panel",
+                    "size": [200, 32],
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "collection_name": "form_buttons",
+                    "alpha": "@dark_gacha.claim_hide",
+                    "propagate_alpha": true,
+                    "offset": "@dark_gacha.claim_off_out",
+                    "controls": [
+                        {
+                            "claim_btn@dark_gacha.claim_btn": {
+                                "collection_index": 0
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "gacha_slot": {
+        "type": "panel",
+        "size": [64, 44],
+        "bindings": [
+            {
+                "binding_type": "collection_details",
+                "binding_collection_name": "form_buttons"
+            }
+        ],
+        "controls": [
+            {
+                "slot_icon": {
+                    "type": "custom",
+                    "renderer": "inventory_item_renderer",
+                    "size": [28, 28],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "bindings": [
+                        {
+                            "binding_name": "#form_button_texture",
+                            "binding_type": "collection",
+                            "binding_collection_name": "form_buttons"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#form_button_texture = '') or (('%.8s' * #form_button_texture) = 'textures')))",
+                            "target_property_name": "#visible"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#form_button_texture - '§a§u§x')",
+                            "target_property_name": "#item_id_aux"
+                        }
+                    ]
+                }
+            },
+            {
+                "text": {
+                    "type": "label",
+                    "text": "#form_button_text",
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "font_scale_factor": 0.7,
+                    "max_size": [62, 12],
+                    "text_alignment": "center",
+                    "color": [1, 1, 1],
+                    "bindings": [
+                        {
+                            "binding_name": "#form_button_text",
+                            "binding_type": "collection",
+                            "binding_collection_name": "form_buttons"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "claim_btn": {
+        "type": "button",
+        "size": [200, 32],
+        "layer": 4,
+        "focus_enabled": true,
+        "$pressed_button_name": "button.form_button_click",
+        "default_control": "def",
+        "hover_control": "hov",
+        "pressed_control": "press",
+        "button_mappings": [
+            {
+                "from_button_id": "button.menu_select",
+                "to_button_id": "$pressed_button_name",
+                "mapping_type": "pressed"
+            },
+            {
+                "from_button_id": "button.menu_ok",
+                "to_button_id": "$pressed_button_name",
+                "mapping_type": "focused"
+            }
+        ],
+        "controls": [
+            {
+                "def": {
+                    "type": "panel",
+                    "controls": [
+                        {
+                            "image": {
+                                "type": "image",
+                                "layer": 1,
+                                "texture": "textures/darkesse/button_default",
+                                "size": ["100%", "100%"]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "hov": {
+                    "type": "panel",
+                    "controls": [
+                        {
+                            "image": {
+                                "type": "image",
+                                "layer": 1,
+                                "texture": "textures/darkesse/button_hover",
+                                "size": ["100%", "100%"]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "press": {
+                    "type": "panel",
+                    "controls": [
+                        {
+                            "image": {
+                                "type": "image",
+                                "layer": 1,
+                                "texture": "textures/darkesse/button_default",
+                                "size": ["100%", "100%"]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "label": {
+                    "type": "label",
+                    "layer": 2,
+                    "text": "#form_button_text",
+                    "font_scale_factor": 0.9,
+                    "color": [1, 1, 1],
+                    "text_alignment": "center",
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "bindings": [
+                        {
+                            "binding_name": "#form_button_text",
+                            "binding_type": "collection",
+                            "binding_collection_name": "form_buttons"
+                        }
+                    ]
+                }
+            }
+        ],
+        "sound_name": "random.click",
+        "sound_volume": 1,
+        "sound_pitch": 1,
+        "bindings": [
+            {
+                "binding_type": "collection_details",
+                "binding_collection_name": "form_buttons"
+            }
+        ]
+    },
+    "spin_anim": {
+        "anim_type": "offset",
+        "easing": "out_circ",
+        "from": [0, 0],
+        "to": [-2220, 0],
+        "duration": 9
+    },
+    "claim_hide": {
+        "anim_type": "alpha",
+        "easing": "linear",
+        "duration": 0,
+        "from": 1,
+        "to": 0,
+        "next": "@dark_gacha.claim_wait"
+    },
+    "claim_wait": {
+        "anim_type": "wait",
+        "duration": 10,
+        "next": "@dark_gacha.claim_show"
+    },
+    "claim_show": {
+        "anim_type": "alpha",
+        "easing": "in_sine",
+        "from": 0,
+        "to": 1,
+        "duration": 0.7
+    },
+    "claim_off_out": {
+        "anim_type": "offset",
+        "easing": "linear",
+        "duration": 0,
+        "from": [0, 0],
+        "to": [0, 1000],
+        "next": "@dark_gacha.claim_off_wait"
+    },
+    "claim_off_wait": {
+        "anim_type": "wait",
+        "duration": 9,
+        "next": "@dark_gacha.claim_off_in"
+    },
+    "claim_off_in": {
+        "anim_type": "offset",
+        "easing": "linear",
+        "duration": 0,
+        "from": [0, 1000],
+        "to": [0, -10]
+    }
+}

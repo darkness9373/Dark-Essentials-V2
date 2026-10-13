@@ -1,0 +1,41 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.cooldown.axe": {
+			"animation_length": 0.7,
+			"bones": {
+				"rightItem": {
+					"position": {
+						"0.0": [8.65365, 18.58907, 5.85808],
+						"0.5": [5.04257, 14.92475, 3.16059],
+						"0.7": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.cooldown.sword": {
+			"animation_length": 0.6,
+			"bones": {
+				"rightitem": {
+					"position": {
+						"0.0": [8.65365, 8.58907, 5.85808],
+						"0.1": [5.04257, 4.92475, 3.16059],
+						"0.3": [0, 0, 0]
+					}
+				}
+			}
+		},
+       "animation.cooldown.scythe": {
+			"animation_length": 0.5,
+			"bones": {
+				"rightitem": {
+					"position": {
+						"0.0": [8.65365, 8.58907, 5.85808],
+						"0.1": [5.04257, 4.92475, 3.16059],
+						"0.3": [0, 0, 0]
+					}
+				}
+			}
+		}
+	 }
+  }

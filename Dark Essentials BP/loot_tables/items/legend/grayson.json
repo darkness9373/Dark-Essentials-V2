@@ -1,0 +1,44 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "custom:grayson",
+          "functions": [
+            {
+              "function": "set_lore",
+              "lore": [
+                "§r",
+                "§r§a> §7 Weapons | §lLegendary",
+                "§r",
+                "§r§a> §7 Basic Attack §f|§7 Left Click §f| §lGrayson Slash",
+                "§r§3> §7 Damage§8 | §f10",
+                "§r",
+                "§r§a> §7 Skill 1 §f|§7 Shift Right Click §f| §lGray Dash",
+                "§r§3> §7 Type§8 | §f4.0",
+                "§r",
+                "§r§a> §7 Skill 2 §f|§7 Right Click §f| §lGrayson Slice",
+                "§r§3> §7 Cooldown§8 | §f7.0",
+                "§r",
+                "§r§a> §7 Skill 3 §f|§7 Shift + Shift §f| §lShadow Walk",
+                "§r§3> §7 Cooldown§8 | §f10.0",
+                "§r",
+                "§r§a> §7 Skill 4 §f|§7 Shift Left Click §f| §lGrayson Spin",
+                "§r§3> §7 Cooldown§8 | §f17.0",
+                "§r",
+                "§r§a> §7 Ultimate §f|§7 Shift + Jump §f| §lGrayson End Slash",
+                "§r§3> §7 Cooldown§8 | §f20.0",
+                "§r",
+                "§r§a> §7 Passive §f| §lSpeed",
+                "§r§3> §7 Damage §lGrayson §7Effect on enemies for a few seconds.",
+                "§r"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

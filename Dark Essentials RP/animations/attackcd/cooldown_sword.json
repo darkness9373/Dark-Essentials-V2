@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.cooldown.sword": {
+			"animation_length": 3,
+			"bones": {
+				"rightArm": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.125": [0, -20, 0],
+						"0.5": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

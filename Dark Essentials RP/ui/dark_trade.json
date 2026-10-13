@@ -1,0 +1,625 @@
+{
+    "namespace": "dark_trade",
+    "trade_root": {
+        "type": "panel",
+        "bindings": [
+            {
+                "binding_name": "#title_text"
+            }
+        ],
+        "controls": [
+            {
+                "overlay": {
+                    "type": "image",
+                    "size": [10000, 10000],
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "texture": "textures/ui/Black",
+                    "alpha": 0.4
+                }
+            },
+            {
+                "main@dark_trade.trade_panel": {
+                    "$size": [320, 300]
+                }
+            }
+        ]
+    },
+    "trade_panel": {
+        "type": "panel",
+        "$size|default": [270, 250],
+        "size": "$size",
+        "controls": [
+            {
+                "background": {
+                    "type": "image",
+                    "size": ["100%", "100%"],
+                    "texture": "textures/darkesse/shop/header"
+                }
+            },
+            {
+                "header": {
+                    "type": "panel",
+                    "size": ["100%", 40],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "controls": [
+                        {
+                            "bg": {
+                                "type": "image",
+                                "size": ["100%", "100%"],
+                                "texture": "textures/darkesse/shop/money_bg"
+                            }
+                        },
+                        {
+                            "title_panel": {
+                                "type": "panel",
+                                "size": ["100%", 40],
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "controls": [
+                                    {
+                                        "logo": {
+                                            "type": "image",
+                                            "texture": "textures/darkesse/menu/trade",
+                                            "size": [32, 32],
+                                            "anchor_from": "left_middle",
+                                            "anchor_to": "left_middle",
+                                            "offset": [7, 0]
+                                        }
+                                    },
+                                    {
+                                        "div": {
+                                            "type": "image",
+                                            "texture": "textures/ui/white_background",
+                                            "nineslice_size": 2,
+                                            "size": [2, "70%"],
+                                            "anchor_from": "left_middle",
+                                            "anchor_to": "left_middle",
+                                            "offset": [44, 0],
+                                            "color": [0.5, 0.5, 0.5]
+                                        }
+                                    },
+                                    {
+                                        "title": {
+                                            "type": "label",
+                                            "text": "#title_text",
+                                            "font_scale_factor": 2.2,
+                                            "anchor_from": "top_left",
+                                            "anchor_to": "top_left",
+                                            "text_alignment": "left",
+                                            "font_type": "MinecraftTen",
+                                            "offset": [52, 0],
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#title_text"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "det": {
+                                            "type": "panel",
+                                            "size": [100, 16],
+                                            "anchor_from": "bottom_left",
+                                            "anchor_to": "bottom_left",
+                                            "offset": [52, -3],
+                                            "controls": [
+                                                {
+                                                    "tl@dark_main.title_detail_stack": {}
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "close": {
+                                            "type": "button",
+                                            "size": [20, 20],
+                                            "anchor_from": "right_middle",
+                                            "anchor_to": "right_middle",
+                                            "offset": [-10, 0],
+                                            "layer": 4,
+                                            "default_control": "def",
+                                            "hover_control": "hov",
+                                            "pressed_control": "pre",
+                                            "controls": [
+                                                {
+                                                    "def": {
+                                                        "type": "panel",
+                                                        "controls": [
+                                                            {
+                                                                "bg": {
+                                                                    "type": "image",
+                                                                    "size": [
+                                                                        20, 20
+                                                                    ],
+                                                                    "texture": "textures/darkesse/shop/close_default"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "hov": {
+                                                        "type": "panel",
+                                                        "controls": [
+                                                            {
+                                                                "bg": {
+                                                                    "type": "image",
+                                                                    "size": [
+                                                                        20, 20
+                                                                    ],
+                                                                    "texture": "textures/darkesse/shop/close_hover"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "pre": {
+                                                        "type": "panel",
+                                                        "controls": [
+                                                            {
+                                                                "bg": {
+                                                                    "type": "image",
+                                                                    "size": [
+                                                                        20, 20
+                                                                    ],
+                                                                    "texture": "textures/darkesse/shop/close_default"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "icon": {
+                                                        "type": "image",
+                                                        "texture": "textures/darkesse/shop/close_x",
+                                                        "size": [14, 14],
+                                                        "layer": 5,
+                                                        "anchor_from": "center",
+                                                        "anchor_to": "center"
+                                                    }
+                                                }
+                                            ],
+                                            "button_mappings": [
+                                                {
+                                                    "from_button_id": "button.menu_select",
+                                                    "to_button_id": "button.menu_exit",
+                                                    "mapping_type": "pressed"
+                                                }
+                                            ],
+                                            "sound_name": "random.click",
+                                            "sound_volume": 1,
+                                            "sound_pitch": 1
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "body@dark_trade.item_body": {}
+            }
+        ]
+    },
+    "title_detail_stack": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "size": ["100%", "100%"],
+        "collection_name": "form_buttons",
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "controls": [
+            {
+                "title_detail@dark_main.title_detail_panel": {
+                    "collection_index": 0
+                }
+            }
+        ]
+    },
+    "title_detail_panel": {
+        "type": "panel",
+        "size": ["100%", "100%"],
+        "bindings": [
+            {
+                "binding_type": "collection_details",
+                "binding_collection_name": "form_buttons"
+            }
+        ],
+        "controls": [
+            {
+                "label": {
+                    "type": "label",
+                    "text": "#form_button_text",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "text_alignment": "left",
+                    "font_scale_factor": 1,
+                    "color": [0.9, 0.9, 0.9],
+                    "bindings": [
+                        {
+                            "binding_name": "#form_button_text",
+                            "binding_type": "collection",
+                            "binding_collection_name": "form_buttons"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "item_body": {
+        "type": "panel",
+        "size": ["100% - 10px", "100% - 40px"],
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "controls": [
+            {
+                "scroll@dark_trade.item_scroll": {}
+            }
+        ]
+    },
+    "item_scroll": {
+        "type": "panel",
+        "size": ["100%", "100%"],
+        "controls": [
+            {
+                "grid_scrolling_panel@common.scrolling_panel": {
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "$show_background": false,
+                    "size": ["100% - 4px", "100% - 4px"],
+                    "$scrolling_content": "dark_trade.item_scroll_content",
+                    "$scroll_size": [5, "100%"],
+                    "$scrolling_pane_size": ["100% - 2px", "100% - 6px"],
+                    "$scrolling_pane_offset": [5, 5],
+                    "$scroll_bar_right_padding_size": [6, 0],
+                    "layer": 2
+                }
+            }
+        ]
+    },
+    "item_scroll_content": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "size": ["100% - 4px", "100%c"],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "controls": [
+            {
+                "item_list@dark_trade.item_list": {}
+            }
+        ]
+    },
+    "item_list": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "size": ["100%", "100%c"],
+        "collection_name": "form_buttons",
+        "factory": {
+            "name": "item_factory",
+            "control_ids": {
+                "button": "dark_trade.item_button"
+            }
+        },
+        "bindings": [
+            {
+                "binding_name": "#form_button_contents",
+                "binding_name_override": "#collection_length"
+            }
+        ]
+    },
+    "item_button": {
+        "type": "panel",
+        "size": ["100%", 52],
+        "offset": [2, 0],
+        "bindings": [
+            {
+                "binding_type": "collection_details",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_name": "#form_button_text",
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not ((#form_button_text - '§b§u§t§r') = #form_button_text))",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "row_hit": {
+                    "type": "button",
+                    "size": ["100%", 50],
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "focus_enabled": true,
+                    "default_control": "def",
+                    "hover_control": "hov",
+                    "pressed_control": "press",
+                    "controls": [
+                        {
+                            "def": {
+                                "type": "panel",
+                                "controls": [
+                                    {
+                                        "image": {
+                                            "type": "image",
+                                            "texture": "textures/darkesse/shop/money_bg_wide",
+                                            "size": ["100%", 50],
+                                            "anchor_from": "center",
+                                            "anchor_to": "center"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "hov": {
+                                "type": "panel",
+                                "controls": [
+                                    {
+                                        "image": {
+                                            "type": "image",
+                                            "texture": "textures/darkesse/shop/header_wide",
+                                            "size": ["100%", 50],
+                                            "anchor_from": "center",
+                                            "anchor_to": "center"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "press": {
+                                "type": "panel",
+                                "controls": [
+                                    {
+                                        "image": {
+                                            "type": "image",
+                                            "texture": "textures/darkesse/shop/money_bg_wide",
+                                            "size": ["100%", 50],
+                                            "anchor_from": "center",
+                                            "anchor_to": "center"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "button_mappings": []
+                }
+            },
+            {
+                "content_stack": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "size": ["100%", 50],
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "layer": 2,
+                    "controls": [
+                        {
+                            "icon_panel": {
+                                "type": "panel",
+                                "size": [48, 48],
+                                "bindings": [
+                                    {
+                                        "binding_name": "#form_button_texture",
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(not (#form_button_texture = ''))",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "textures": {
+                                            "type": "image",
+                                            "size": [35, 35],
+                                            "anchor_from": "center",
+                                            "anchor_to": "center",
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#form_button_texture",
+                                                    "binding_name_override": "#texture",
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "form_buttons"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_property_name": "(('%.8s' * #texture) = 'textures')",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "aux_item": {
+                                            "type": "custom",
+                                            "renderer": "inventory_item_renderer",
+                                            "size": [35, 35],
+                                            "anchor_from": "center",
+                                            "anchor_to": "center",
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#form_button_texture",
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "form_buttons"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_property_name": "(not ((#form_button_texture = '') or (('%.8s' * #form_button_texture) = 'textures')))",
+                                                    "target_property_name": "#visible"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_property_name": "(#form_button_texture - '§a§u§x')",
+                                                    "target_property_name": "#item_id_aux"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "label_wrap": {
+                                "type": "panel",
+                                "size": ["fill", 50],
+                                "controls": [
+                                    {
+                                        "label": {
+                                            "type": "label",
+                                            "text": "#form_button_text",
+                                            "anchor_from": "left_middle",
+                                            "anchor_to": "left_middle",
+                                            "offset": [2, 0],
+                                            "text_alignment": "left",
+                                            "font_scale_factor": 1.0,
+                                            "color": [1, 1, 1],
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#form_button_text",
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "form_buttons"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "buy_spacer": {
+                                "type": "panel",
+                                "size": [48, 32]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "buy_btn@dark_trade.buy_badge_button": {}
+            }
+        ]
+    },
+    "buy_badge_button": {
+        "type": "button",
+        "size": [55, 22],
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "offset": [-14, 0],
+        "layer": 3,
+        "$pressed_button_name": "button.form_button_click",
+        "default_control": "def",
+        "hover_control": "hov",
+        "pressed_control": "press",
+        "button_mappings": [
+            {
+                "from_button_id": "button.menu_select",
+                "to_button_id": "$pressed_button_name",
+                "mapping_type": "pressed"
+            },
+            {
+                "from_button_id": "button.menu_ok",
+                "to_button_id": "$pressed_button_name",
+                "mapping_type": "focused"
+            }
+        ],
+        "controls": [
+            {
+                "def": {
+                    "type": "panel",
+                    "controls": [
+                        {
+                            "image": {
+                                "type": "image",
+                                "texture": "textures/darkesse/shop/list_btn_def",
+                                "size": ["100%", "100%"],
+                                "bindings": [
+                                    {
+                                        "binding_name": "#form_button_text",
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "hov": {
+                    "type": "panel",
+                    "controls": [
+                        {
+                            "image": {
+                                "type": "image",
+                                "texture": "textures/darkesse/shop/list_btn_hov",
+                                "size": ["100%", "100%"],
+                                "bindings": [
+                                    {
+                                        "binding_name": "#form_button_text",
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "press": {
+                    "type": "panel",
+                    "controls": [
+                        {
+                            "image": {
+                                "type": "image",
+                                "texture": "textures/darkesse/shop/list_btn_def",
+                                "size": ["100%", "100%"],
+                                "bindings": [
+                                    {
+                                        "binding_name": "#form_button_text",
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "buy_label": {
+                    "type": "label",
+                    "text": "VIEW",
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "text_alignment": "center",
+                    "font_scale_factor": 1.0,
+                    "layer": 1,
+                    "color": [1, 1, 1]
+                }
+            }
+        ],
+        "sound_name": "random.click",
+        "sound_volume": 1,
+        "sound_pitch": 1,
+        "bindings": [
+            {
+                "binding_type": "collection_details",
+                "binding_collection_name": "form_buttons"
+            }
+        ]
+    }
+}

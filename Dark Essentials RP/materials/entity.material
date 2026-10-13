@@ -1,0 +1,11 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:material": {
+    "description": {
+      "identifier": "custom:material.dragon"
+    },
+    "components": {
+      "minecraft:emissive": true
+    }
+  }
+}

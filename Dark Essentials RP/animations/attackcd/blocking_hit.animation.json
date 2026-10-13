@@ -1,0 +1,20 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.shield.wield_main_hand_first_person_blocking_hit": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.5,
+		
+			"bones": {
+				"shield": {
+					"rotation": ["variable.main_hand_first_person_rot_x", "variable.main_hand_first_person_rot_y - 12.0", "variable.main_hand_first_person_rot_z"],
+					"position": {
+						"0.0": ["variable.main_hand_first_person_pos_x - 2", "variable.main_hand_first_person_pos_y - 2", "variable.main_hand_first_person_pos_z -2"],
+						"0.2": ["variable.main_hand_first_person_pos_x + 6", "variable.main_hand_first_person_pos_y + 6", "variable.main_hand_first_person_pos_z + 6"],
+						"0.4": ["variable.main_hand_first_person_pos_x - 2", "variable.main_hand_first_person_pos_y - 2", "variable.main_hand_first_person_pos_z - 2"]
+					}
+				}
+			}
+		}
+	}
+}

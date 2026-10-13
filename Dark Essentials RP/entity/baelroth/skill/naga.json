@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "custom:naga",
+      "materials": {
+        "default": "enderman"
+      },
+      "textures": {
+        "default": "textures/entity/baelroth_spear/naga"
+      },
+      "geometry": {
+        "default": "geometry.naga"
+      },
+      "scripts": {
+				"animate": [
+					"controller"
+				]
+			},
+			"animations": {
+				"controller": "controller.animation.chain.general",
+				"spawned": "Animation.hitam"
+	  },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

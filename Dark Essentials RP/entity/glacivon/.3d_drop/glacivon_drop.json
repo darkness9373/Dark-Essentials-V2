@@ -1,0 +1,37 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "drp:glacivon",
+      "materials": {
+        "default": "enderman"
+      },
+      "textures": {
+        "frame_0": "textures/entity/glacivon_fist/glacivon1",
+	    "frame_1": "textures/entity/glacivon_fist/glacivon2",
+	    "frame_2": "textures/entity/glacivon_fist/glacivon3",
+	    "frame_3": "textures/entity/glacivon_fist/glacivon4",
+	    "frame_4": "textures/entity/glacivon_fist/glacivon5",
+	    "frame_5": "textures/entity/glacivon_fist/glacivon5",
+        "frame_6": "textures/entity/glacivon_fist/glacivon4",
+	    "frame_7": "textures/entity/glacivon_fist/glacivon3",
+		"frame_8": "textures/entity/glacivon_fist/glacivon2",
+		"frame_9": "textures/entity/glacivon_fist/glacivon1"
+      },
+      "geometry": {
+        "default": "geometry.glacivon.drop"
+      },
+      "animations": {
+        "baelroth_drop": "animation.baelroth.drop"
+      },
+      "scripts": {
+        "animate": [
+          "baelroth_drop"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.glacivon"
+      ]
+    }
+  }
+}

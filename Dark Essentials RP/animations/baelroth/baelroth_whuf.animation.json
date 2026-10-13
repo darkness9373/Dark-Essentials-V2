@@ -1,0 +1,30 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.baelroth.whuf": {
+			"animation_length": 0.5,
+			"bones": {
+				"bone": {
+					"scale": {
+						"0.0": {
+							"post": [0.5, 2, 0.5],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2083": {
+							"post": [1.2667, 0.2667, 1.2667],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4583": {
+							"post": [1.8704, 0.2482, 1.8704],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5": {
+							"post": [1.8704, 0.2482, 1.8704],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			}
+		}
+	}
+}

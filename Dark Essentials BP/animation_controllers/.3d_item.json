@@ -1,0 +1,42 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.3d_item": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "tagging": "query.is_on_ground"
+            }
+          ]
+        },
+        "tagging": {
+          "on_entry": [
+            "/tag @s add drop"
+          ]
+        }
+      }
+    },
+    "controller.animation.drop": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "item": "(0.1)"
+            }
+          ]
+       },
+       "item": {
+          "transitions": [
+            {
+              "default": "(0.1)"
+            }
+          ],
+          "on_entry": [
+            "/function give/item_drop"
+          ]
+        }
+      }
+    }
+  }
+}

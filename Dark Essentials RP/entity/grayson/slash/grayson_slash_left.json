@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "custom:grayson_left_slash",
+      "materials": {
+        "default": "enderman"
+      },
+      "textures": {
+        "hdoom1": "textures/entity/grayson_katana/grayson_slash1",
+        "hdoom2": "textures/entity/grayson_katana/grayson_slash2",
+        "hdoom3": "textures/entity/grayson_katana/grayson_slash3",
+        "hdoom4": "textures/entity/grayson_katana/grayson_slash4",
+        "hdoom5": "textures/entity/grayson_katana/grayson_slash5",
+        "hdoom6": "textures/entity/slash/kosongg",
+        "hdoom7": "textures/entity/slash/kosongg",
+        "hdoom8": "textures/entity/slash/kosongg",
+        "hdoom9": "textures/entity/slash/kosongg",
+        "hdoom10": "textures/entity/slash/kosongg",
+        "hdoom11": "textures/entity/slash/kosongg",
+        "hdoom12": "textures/entity/slash/kosongg"
+      },
+      "geometry": {
+        "baelroth": "geometry.grayson_slash_left"
+      },
+      "render_controllers": [
+        "controller.render.baelrothslash"
+      ]
+    }
+  }
+}

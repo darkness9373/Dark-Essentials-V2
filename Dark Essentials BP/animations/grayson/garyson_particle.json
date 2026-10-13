@@ -1,0 +1,140 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.item.grayson_particle": {
+      "animation_length": 10.0,
+      "loop": false,
+      "timeline": {
+        "0.0": [
+          "/execute at @s run particle custom:grayson_melingkar ~ ~ ~1",
+          "/execute at @s run particle custom:grayson_melingkar ~ ~ ~-1"
+        ],
+        "0.04": [
+          "/execute at @s run particle custom:grayson_melingkar ~0.2 ~0.05 ~0.9575",
+          "/execute at @s run particle custom:grayson_melingkar ~-0.2 ~0.05 ~-0.9575"
+        ],
+        "0.08": [
+          "/execute at @s run particle custom:grayson_melingkar ~0.4 ~0.1 ~0.9",
+          "/execute at @s run particle custom:grayson_melingkar ~-0.4 ~0.1 ~-0.9"
+        ],
+        "0.1": [
+          "/execute at @s run particle custom:grayson_melingkar ~0.6 ~0.15 ~0.8",
+          "/execute at @s run particle custom:grayson_melingkar ~-0.6 ~0.15 ~-0.8"
+        ],
+        "0.14": [
+          "/execute at @s run particle custom:grayson_melingkar ~0.7 ~0.2 ~0.7",
+          "/execute at @s run particle custom:grayson_melingkar ~-0.7 ~0.2 ~-0.7"
+        ],
+        "0.18": [
+          "/execute at @s run particle custom:grayson_melingkar ~0.8 ~0.25 ~0.6",
+          "/execute at @s run particle custom:grayson_melingkar ~-0.8 ~0.25 ~-0.6"
+        ],
+        "0.2": [
+          "/execute at @s run particle custom:grayson_melingkar ~0.9 ~0.3 ~0.4",
+          "/execute at @s run particle custom:grayson_melingkar ~-0.9 ~0.3 ~-0.4"
+        ],
+        "0.24": [
+          "/execute at @s run particle custom:grayson_melingkar ~0.9575 ~0.35 ~0.2",
+          "/execute at @s run particle custom:grayson_melingkar ~-0.9575 ~0.35 ~-0.2"
+        ],
+        "0.28": [
+          "/execute at @s run particle custom:grayson_melingkar ~1 ~0.375 ~",
+          "/execute at @s run particle custom:grayson_melingkar ~-1 ~0.375 ~"
+        ],
+        "0.3": [
+          "/execute at @s run particle custom:grayson_melingkar ~0.9575 ~0.35 ~-0.2",
+          "/execute at @s run particle custom:grayson_melingkar ~-0.9575 ~0.35 ~0.2"
+        ],
+        "0.34": [
+          "/execute at @s run particle custom:grayson_melingkar ~0.9 ~0.3 ~-0.4",
+          "/execute at @s run particle custom:grayson_melingkar ~-0.9 ~0.3 ~0.4"
+        ],
+        "0.38": [
+          "/execute at @s run particle custom:grayson_melingkar ~0.8 ~0.25 ~-0.6",
+          "/execute at @s run particle custom:grayson_melingkar ~-0.8 ~0.25 ~0.6"
+        ],
+        "0.4": [
+          "/execute at @s run particle custom:grayson_melingkar ~0.7 ~0.2 ~-0.7",
+          "/execute at @s run particle custom:grayson_melingkar ~-0.7 ~0.2 ~0.7"
+        ],
+        "0.44": [
+          "/execute at @s run particle custom:grayson_melingkar ~0.6 ~0.15 ~-0.8",
+          "/execute at @s run particle custom:grayson_melingkar ~-0.6 ~0.15 ~0.8"
+        ],
+        "0.48": [
+          "/execute at @s run particle custom:grayson_melingkar ~0.4 ~0.1 ~-0.9",
+          "/execute at @s run particle custom:grayson_melingkar ~-0.4 ~0.1 ~0.9"
+        ],
+        "0.5": [
+          "/execute at @s run particle custom:grayson_melingkar ~0.2 ~0.05 ~-0.9575",
+          "/execute at @s run particle custom:grayson_melingkar ~-0.2 ~0.05 ~0.9575"
+        ],
+        "0.54": [
+          "/execute at @s run particle custom:grayson_melingkar ~ ~ ~-1",
+          "/execute at @s run particle custom:grayson_melingkar ~ ~ ~1"
+        ],
+        "0.58": [
+          "/execute at @s run particle custom:grayson_melingkar ~-0.2 ~-0.05 ~-0.9575",
+          "/execute at @s run particle custom:grayson_melingkar ~0.2 ~-0.05 ~0.9575"
+        ],
+        "0.6": [
+          "/execute at @s run particle custom:grayson_melingkar ~-0.4 ~-0.1 ~-0.9",
+          "/execute at @s run particle custom:grayson_melingkar ~0.4 ~-0.1 ~0.9"
+        ],
+        "0.64": [
+          "/execute at @s run particle custom:grayson_melingkar ~-0.6 ~-0.15 ~-0.8",
+          "/execute at @s run particle custom:grayson_melingkar ~0.6 ~-0.15 ~0.8"
+        ],
+        "0.68": [
+          "/execute at @s run particle custom:grayson_melingkar ~-0.7 ~-0.2 ~-0.7",
+          "/execute at @s run particle custom:grayson_melingkar ~0.7 ~-0.2 ~0.7"
+        ],
+        "0.7": [
+          "/execute at @s run particle custom:grayson_melingkar ~-0.8 ~-0.25 ~-0.6",
+          "/execute at @s run particle custom:grayson_melingkar ~0.8 ~-0.25 ~0.6"
+        ],
+        "0.74": [
+          "/execute at @s run particle custom:grayson_melingkar ~-0.9 ~-0.3 ~-0.4",
+          "/execute at @s run particle custom:grayson_melingkar ~0.9 ~-0.3 ~0.4"
+        ],
+        "0.78": [
+          "/execute at @s run particle custom:grayson_melingkar ~-0.9575 ~-0.35 ~-0.2",
+          "/execute at @s run particle custom:grayson_melingkar ~0.9575 ~-0.35 ~0.2"
+        ],
+        "0.8": [
+          "/execute at @s run particle custom:grayson_melingkar ~-1 ~-0.375 ~",
+          "/execute at @s run particle custom:grayson_melingkar ~1 ~-0.375 ~"
+        ],
+        "0.84": [
+          "/execute at @s run particle custom:grayson_melingkar ~-0.9575 ~-0.35 ~0.2",
+          "/execute at @s run particle custom:grayson_melingkar ~0.9575 ~-0.35 ~-0.2"
+        ],
+        "0.88": [
+          "/execute at @s run particle custom:grayson_melingkar ~-0.9 ~-0.3 ~0.4",
+          "/execute at @s run particle custom:grayson_melingkar ~0.9 ~-0.3 ~-0.4"
+        ],
+        "0.9": [
+          "/execute at @s run particle custom:grayson_melingkar ~-0.8 ~-0.25 ~0.6",
+          "/execute at @s run particle custom:grayson_melingkar ~0.8 ~-0.25 ~-0.6"
+        ],
+        "0.94": [
+          "/execute at @s run particle custom:grayson_melingkar ~-0.7 ~-0.2 ~0.7",
+          "/execute at @s run particle custom:grayson_melingkar ~0.7 ~-0.2 ~-0.7"
+        ],
+        "0.98": [
+          "/execute at @s run particle custom:grayson_melingkar ~-0.6 ~-0.15 ~0.8",
+          "/execute at @s run particle custom:grayson_melingkar ~0.6 ~-0.15 ~-0.8"
+        ],
+        "1.0": [
+          "/execute at @s run particle custom:grayson_melingkar ~-0.4 ~-0.1 ~0.9",
+          "/execute at @s run particle custom:grayson_melingkar ~0.4 ~-0.1 ~-0.9"
+        ],
+        "1.04": [
+          "/execute at @s run particle custom:grayson_melingkar ~-0.2 ~-0.05 ~0.9575",
+          "/execute at @s run particle custom:grayson_melingkar ~0.2 ~-0.05 ~-0.9575",
+          "/scoreboard players set @s graysonpart 2"
+        ]
+      }
+    }
+  }
+}

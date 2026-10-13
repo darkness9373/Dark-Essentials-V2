@@ -1,0 +1,53 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.glacivon_left",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "h_body",
+					"pivot": [0, 17.019, 0],
+					"cubes": [
+						{
+							"origin": [-32.5, 17.019, -32.5],
+							"size": [65, 0, 65],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 0]},
+								"east": {"uv": [0, 0], "uv_size": [16, 0]},
+								"south": {"uv": [0, 0], "uv_size": [16, 0]},
+								"west": {"uv": [0, 0], "uv_size": [16, 0]},
+								"up": {"uv": [64, 64], "uv_size": [-64, -64]},
+								"down": {"uv": [64, 0], "uv_size": [-64, 64]}
+							}
+						}
+					]
+				},
+				{
+					"name": "h_body2",
+					"pivot": [0, 17.019, 0],
+					"cubes": [
+						{
+							"origin": [-32.5, 17.019, -32.5],
+							"size": [65, 0, 65],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 0]},
+								"east": {"uv": [0, 0], "uv_size": [16, 0]},
+								"south": {"uv": [0, 0], "uv_size": [16, 0]},
+								"west": {"uv": [0, 0], "uv_size": [16, 0]},
+								"up": {"uv": [64, 64], "uv_size": [-64, -64]},
+								"down": {"uv": [64, 0], "uv_size": [-64, 64]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

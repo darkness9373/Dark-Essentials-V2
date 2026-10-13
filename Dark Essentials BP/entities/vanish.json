@@ -1,0 +1,65 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "custom:vanish",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"vanish": {
+				"minecraft:type_family": {
+					"family": [
+						"vanish"
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"damage"
+				]
+			},
+			"minecraft:timer": {
+				"looping": false,
+				"time": 0.3,
+				"time_down_event": {
+					"event": "vanish"
+				}
+			},
+			"minecraft:despawn": {
+				"remove_child_entities": true,
+				"filters": {
+					"all_of": [
+						{
+							"test": "is_family",
+							"subject": "self",
+							"value": "vanish"
+						}
+					]
+				}
+			},
+			"minecraft:collision_box": {
+				"width": 0.25,
+				"height": 0.25
+			},
+			"minecraft:scale": {
+				"value": 0.1
+			},
+			"minecraft:physics": {
+				"has_gravity": false
+			}
+		},
+		"events": {
+			"vanish": {
+				"add": {
+					"component_groups": [
+						"vanish"
+					]
+				}
+			}
+		}
+	}
+}

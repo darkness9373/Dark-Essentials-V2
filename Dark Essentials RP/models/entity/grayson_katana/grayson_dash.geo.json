@@ -1,0 +1,47 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.dash_grayson",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 18,
+				"visible_bounds_height": 8,
+				"visible_bounds_offset": [0, 2, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [-76, 23, 15],
+					"rotation": [90, 0, 0],
+					"cubes": [
+						{
+							"origin": [-53.4158, -36.07248, -13.3288],
+							"size": [135, 0, 50],
+							"pivot": [-51, 15, 19],
+							"rotation": [0, 0, -90],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [43, 0]},
+								"east": {"uv": [0, 0], "uv_size": [43, 0]},
+								"south": {"uv": [0, 0], "uv_size": [43, 0]},
+								"west": {"uv": [0, 0], "uv_size": [43, 0]},
+								"up": {"uv": [0, 94], "uv_size": [128, -50]},
+								"down": {"uv": [34, 33], "uv_size": [45, -33]}
+							}
+						}
+					]
+				},
+				{
+					"name": "bone2",
+					"pivot": [-4.27024, 37, 0],
+					"rotation": [0, -52.5, -180]
+				},
+				{
+					"name": "pixelcreate3",
+					"pivot": [0, 0, 0]
+				}
+			]
+		}
+	]
+}

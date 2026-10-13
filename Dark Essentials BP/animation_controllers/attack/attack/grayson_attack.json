@@ -1,0 +1,93 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.grayson_attack": {
+      "states": {
+        "default": {
+          "on_entry": [
+            "/tag @s remove no_delay"
+          ],
+          "on_exit": [
+            "/tag @s add no_delay"
+          ],
+          "transitions": [
+            {
+              "default2": "variable.attack_time"
+            }
+          ]
+        },
+        "default2": {
+          "on_exit": [
+            "/scoreboard players set @s attack_delay 0"
+          ],
+          "transitions": [
+            {
+              "ns1": "variable.attack_time && !query.is_sneaking && q.get_equipped_item_name == 'grayson'"
+            }
+          ]
+        },
+        "ns1": {
+          "on_entry": [
+            "/summon custom:grayson_right_slash ~~~ facing ^^^1000",
+            "/playsound items.grayson_attack @a[r=30]",
+            "/tag @s add gr1",
+            "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!gr1,c=4,r=5] run particle new:grayson_impact",
+            "/damage @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!gr1] 8",
+            "/execute at @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!gr1,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut", 
+            "/tag @s remove br1"
+          ],
+          "on_exit": [
+            "/scoreboard players set @s attack_delay 0"
+          ],
+          "transitions": [
+            {
+              "ns2": "variable.attack_time && query.scoreboard('attack_delay') >= 8 && !query.is_sneaking && q.get_equipped_item_name == 'grayson'"
+            }
+          ]
+        },
+        "ns2": {
+          "on_entry": [
+            "/summon custom:grayson_left_slash ~~~ facing ^^^1000",
+            "/playsound items.grayson_attack @a[r=30]",
+            "/tag @s add gr2",
+            "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!gr2,c=4,r=5] run particle new:grayson_impact",
+            "/damage @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!gr2] 8",
+            "/execute at @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!gr2,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut", 
+            "/tag @s remove br2"
+          ],
+          "on_exit": [
+            "/scoreboard players set @s attack_delay 0"
+          ],
+          "transitions": [
+            {
+              "ns3": "variable.attack_time && query.scoreboard('attack_delay') >= 8 && !query.is_sneaking && q.get_equipped_item_name == 'grayson'"
+            }
+          ]
+        },
+        "ns3": {
+          "on_entry": [
+             "/summon custom:grayson_right_slash ~~~ facing ^^^1000",
+             "/playsound items.grayson_attack @a[r=30]",
+             "/summon custom:grayson_left_slash ~~~ facing ^^^1000",
+             "/playsound items.grayson_attack @a[r=30]",
+            "/tag @s add gr3",
+            "/particle rpg:impact ~ ~ ~", 
+            "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!gr3,c=4,r=5] run particle new:grayson_impact",
+            "/damage @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,r=5,type=!custom:vanish,tag=!gr3] 10",
+            "/execute at @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!gr3,c=5,r=5,family=!damage,family=!can_ride] run particle grayson:cut",    
+            "/execute at @e[type=!custom:grayson_right_slash,type=!custom:grayson_left_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!gr3,c=5,r=5,family=!damage,family=!can_ride] run particle rpg:gray_mark_start ~~3~",  
+            "/tag @s remove br3"
+          ],
+          "on_exit": [
+            "/scoreboard players set @s attack_delay 0"
+          ],
+          "transitions": [
+            {
+              "ns1": "variable.attack_time && query.scoreboard('attack_delay') >= 8 && !query.is_sneaking && q.get_equipped_item_name == 'grayson'"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

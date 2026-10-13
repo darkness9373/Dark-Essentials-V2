@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "drp:grayson",
+      "materials": {
+        "default": "enderman"
+      },
+      "textures": {
+        "default": "textures/entity/grayson_katana/grayson_katana"
+      },
+      "geometry": {
+        "default": "geometry.grayson.drop"
+      },
+      "animations": {
+        "baelroth_drop": "animation.baelroth.drop"
+      },
+      "scripts": {
+        "animate": [
+          "baelroth_drop"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

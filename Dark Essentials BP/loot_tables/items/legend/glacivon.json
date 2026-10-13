@@ -1,0 +1,44 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "custom:glacivon",
+          "functions": [
+            {
+              "function": "set_lore",
+              "lore": [
+                "§r",
+                "§r§a> §7 Weapons | §4Legendary",
+                "§r",
+                "§r§a> §7 Basic Attack §f|§7 Left Click §f| §lGlacicon §6Puch",
+                "§r§3> §7 Damage§8 | §f8",
+                "§r",
+                "§r§a> §7 Skill 1 §f|§7 Shift Right Click §f| §lGlacivon §6Dash",
+                "§r§3> §7 Type§8 | §fPasif Dash",
+                "§r",
+                "§r§a> §7 Skill 2 §f|§7 Right Click §f| §lPhoenix §6Puch",
+                "§r§3> §7 Cooldown§8 | §f7.0",
+                "§r",
+                "§r§a> §7 Skill 3 §f|§7 Shift + Shift §f| §lGlacivon §6Tornado",
+                "§r§3> §7 Cooldown§8 | §f14.0",
+                "§r",
+                "§r§a> §7 Skill 4 §f|§7 Shift Left Click §f| §lDeadly §6Squash",
+                "§r§3> §7 Cooldown§8 | §f20.0",
+                "§r",
+                "§r§a> §7 Ultimate §f|§7 Shift + Jump §f| §lGlacivon §6Smash",
+                "§r§3> §7 Cooldown§8 | §f30.0",
+                "§r",
+                "§r§a> §7 Passive §f| §l§3Down",
+                "§r§3> §7 Damage §6Glacivon §7Effect on enemies for a few seconds.",
+                "§r"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

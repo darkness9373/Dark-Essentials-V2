@@ -1,0 +1,156 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.glacivon1": {
+            "initial_state": "default",
+            "states": {
+                "default":{
+                    "transitions": [
+                        {"warrior_use1": "(query.get_equipped_item_name == 'glacivon') && (query.is_using_item) && (query.is_sneaking)"}
+                    ]
+                },
+                "warrior_use1": {
+                    "transitions": [
+                        {"warrior_use11": "(query.get_equipped_item_name == 'glacivon') && query.scoreboard('glacivon1') <= 2 && query.scoreboard('glacivon1') >= 1"}
+                    ],
+                    "animations":[
+                        "glacivon_dash1"
+                    ]
+                },
+                "warrior_use11": {
+                    "transitions": [
+                        {"default": "(query.get_equipped_item_name == 'glacivon')"}
+                    ],
+                    "on_entry":[
+                        "/scoreboard players set @s glacivon1 0"
+                    ]
+                }
+            }
+        },
+        "controller.animation.glacivon2": {
+            "initial_state": "default",
+            "states": {
+                "default":{
+                    "transitions": [
+                        {"warrior_use2": "(query.get_equipped_item_name == 'glacivon') && (query.is_using_item) && (!query.is_sneaking)"}
+                    ]
+                },
+                "warrior_use2": {
+                    "transitions": [
+                        {"warrior_use21": "(query.get_equipped_item_name == 'glacivon') && query.scoreboard('glacivon2') <= 2 && query.scoreboard('glacivon2') >= 1"}
+                    ],
+                    "animations":[
+                        "glacivon_punch1"
+                    ]
+                },
+                "warrior_use21": {
+                    "transitions": [
+                        {"default": "(query.get_equipped_item_name == 'glacivon')"}
+                    ],
+                    "on_entry":[
+                        "/scoreboard players set @s glacivon2 0"
+                    ]
+                }
+            }
+        },
+        "controller.animation.glacivon3": {
+            "initial_state": "default",
+            "states": {
+                "default":{
+                    "transitions": [
+                        {"warrior_use3": "(query.get_equipped_item_name == 'glacivon') && (query.is_sneaking)"}
+				     	],
+                    "on_exit": [
+                        "/scoreboard players set @s sistem_delay 0"
+                    ]
+                },
+                "warrior_use3": {
+                    "transitions": [
+                        {"warrior_use31": "(query.get_equipped_item_name == 'glacivon') && (!query.is_sneaking) && query.scoreboard('sistem_delay') <= 10 && query.scoreboard('sistem_delay') >= 1"},
+                        {"default": "query.scoreboard('sistem_delay') >= 12"}
+				     	],
+                    "on_exit": [
+                        "/scoreboard players set @s sistem_delay 0"
+                    ]
+                },
+                "warrior_use31": {
+                    "transitions": [
+                        {"warrior_use32": "(query.get_equipped_item_name == 'glacivon') && (query.is_sneaking) && query.scoreboard('sistem_delay') <= 10 && query.scoreboard('sistem_delay') >= 1"},
+                        {"default": "query.scoreboard('sistem_delay') >= 12"}
+				     	],
+                    "on_exit": [
+                        "/scoreboard players set @s sistem_delay 0"
+                    ]
+                },
+                "warrior_use32": {
+                    "transitions": [
+                        {"warrior_use33": "(query.get_equipped_item_name == 'glacivon') && query.scoreboard('glacivon3') <= 2 && query.scoreboard('glacivon3') >= 1"}
+                    ],
+                    "animations":[
+                        "glacivon_tornado"
+                    ]
+                },
+                "warrior_use33": {
+                    "transitions": [
+                        {"default": "(query.get_equipped_item_name == 'glacivon')"}
+                    ],
+                    "on_entry":[
+                        "/scoreboard players set @s glacivon3 0"
+                    ]
+                }
+            }
+        },
+        "controller.animation.glacivon4": {
+            "initial_state": "default",
+            "states": {
+                "default":{
+                    "transitions": [
+                        {"warrior_use4": "(query.get_equipped_item_name == 'glacivon') && (query.is_sneaking) && (!query.is_using_item) && (variable.attack_time > 0.0)"}
+                    ]
+                },
+                "warrior_use4": {
+                    "transitions": [
+                        {"warrior_use41": "(query.get_equipped_item_name == 'glacivon') && query.scoreboard('glacivon4') <= 2 && query.scoreboard('glacivon4') >= 1"}
+                    ],
+                    "animations":[
+                        "glacivon.deadly.squash"
+                    ]
+                },
+                "warrior_use41": {
+                    "transitions": [
+                        {"default": "(query.get_equipped_item_name == 'glacivon')"}
+                    ],
+                    "on_entry":[
+                        "/scoreboard players set @s glacivon4 0"
+                    ]
+                }
+            }
+        },
+        "controller.animation.glacivon5": {
+            "initial_state": "default",
+            "states": {
+                "default":{
+                    "transitions": [
+                        {"solvayne_radiant_tome_use3": "(query.get_equipped_item_name == 'glacivon') && (query.is_sneaking) && (query.is_jumping)"}
+                    ]
+                },
+                "solvayne_radiant_tome_use3": {
+                    "transitions": [
+                        {"solvayne_radiant_tome_use31": "(query.get_equipped_item_name == 'glacivon') && query.scoreboard('glacivon5') <= 2 && query.scoreboard('glacivon5') >= 1"}
+                    ], 
+                    "animations":[
+                        "glacivon.upercut"
+                    ]
+                },
+                "solvayne_radiant_tome_use31": {
+                    "transitions": [
+                        {"default": "(query.get_equipped_item_name == 'glacivon')"}
+                    ],
+                    "on_entry":[
+                        "/scoreboard players set @s glacivon5 0"
+                    ]
+                }
+            }
+        }
+    }
+}

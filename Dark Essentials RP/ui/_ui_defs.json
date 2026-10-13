@@ -1,0 +1,14 @@
+{
+    "ui_defs": [
+        "ui/dark_essentials.json",
+        "ui/dark_gacha.json",
+        "ui/dark_shop.json",
+        "ui/dark_confirm.json",
+        "ui/hud_screen.json",
+        "ui/dark_main_menu.json",
+        "ui/dark_trade.json",
+        "ui/sell_buy_trade.json",
+        "ui/dark_pvp.json",
+        "ui/preset.json"
+    ]
+}

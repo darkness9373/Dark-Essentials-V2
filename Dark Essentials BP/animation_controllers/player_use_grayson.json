@@ -1,0 +1,183 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+    "controller.animation.items.custom": {
+            "initial_state": "default",
+            "states": {
+                "default":{
+                    "transitions": [
+                        {"moonlit_etcher": "(query.get_equipped_item_name == 'grayson')"}
+                    ]
+                },
+                "moonlit_etcher": {
+                    "transitions": [
+                        {"moonlit_etcher1": "query.scoreboard('graysonpart') <= 2 && query.scoreboard('graysonpart') >= 1"},
+                        {"default": "(!query.get_equipped_item_name == 'grayson')"}
+                    ],
+                    "animations":[
+                        "grayson_particle"
+                    ]
+               },
+                "moonlit_etcher1": {
+                    "transitions": [
+                        {"default": "(1.0)"}
+                    ],
+                    "on_entry":[
+                        "/scoreboard players set @s graysonpart 0"
+                    ]
+                }
+            }
+        },
+        "controller.animation.grayson1": {
+            "initial_state": "default",
+            "states": {
+                "default":{
+                    "transitions": [
+                        {"warrior_use1": "(query.get_equipped_item_name == 'grayson') && (query.is_using_item) && (query.is_sneaking)"}
+                    ]
+                },
+                "warrior_use1": {
+                    "transitions": [
+                        {"warrior_use11": "(query.get_equipped_item_name == 'grayson') && query.scoreboard('grayson1') <= 2 && query.scoreboard('grayson1') >= 1"}
+                    ],
+                    "animations":[
+                        "grayson_dash"
+                    ]
+                },
+                "warrior_use11": {
+                    "transitions": [
+                        {"default": "(query.get_equipped_item_name == 'grayson')"}
+                    ],
+                    "on_entry":[
+                        "/scoreboard players set @s grayson1 0"
+                    ]
+                }
+            }
+        },
+        "controller.animation.grayson2": {
+            "initial_state": "default",
+            "states": {
+                "default":{
+                    "transitions": [
+                        {"warrior_use2": "(query.get_equipped_item_name == 'grayson') && (query.is_using_item) && (!query.is_sneaking)"}
+                    ]
+                },
+                "warrior_use2": {
+                    "transitions": [
+                        {"warrior_use21": "(query.get_equipped_item_name == 'grayson') && query.scoreboard('grayson2') <= 2 && query.scoreboard('grayson2') >= 1"}
+                    ],
+                    "animations":[
+                        "glacivon_slice"
+                    ]
+                },
+                "warrior_use21": {
+                    "transitions": [
+                        {"default": "(query.get_equipped_item_name == 'grayson')"}
+                    ],
+                    "on_entry":[
+                        "/scoreboard players set @s grayson2 0"
+                    ]
+                }
+            }
+        },
+        "controller.animation.grayson3": {
+            "initial_state": "default",
+            "states": {
+                "default":{
+                    "transitions": [
+                        {"warrior_use3": "(query.get_equipped_item_name == 'grayson') && (query.is_sneaking)"}
+				     	],
+                    "on_exit": [
+                        "/scoreboard players set @s sistem_delay 0"
+                    ]
+                },
+                "warrior_use3": {
+                    "transitions": [
+                        {"warrior_use31": "(query.get_equipped_item_name == 'grayson') && (!query.is_sneaking) && query.scoreboard('sistem_delay') <= 10 && query.scoreboard('sistem_delay') >= 1"},
+                        {"default": "query.scoreboard('sistem_delay') >= 12"}
+				     	],
+                    "on_exit": [
+                        "/scoreboard players set @s sistem_delay 0"
+                    ]
+                },
+                "warrior_use31": {
+                    "transitions": [
+                        {"warrior_use32": "(query.get_equipped_item_name == 'grayson') && (query.is_sneaking) && query.scoreboard('sistem_delay') <= 10 && query.scoreboard('sistem_delay') >= 1"},
+                        {"default": "query.scoreboard('sistem_delay') >= 12"}
+				     	],
+                    "on_exit": [
+                        "/scoreboard players set @s sistem_delay 0"
+                    ]
+                },
+                "warrior_use32": {
+                    "transitions": [
+                        {"warrior_use33": "(query.get_equipped_item_name == 'grayson') && query.scoreboard('grayson3') <= 2 && query.scoreboard('grayson3') >= 1"}
+                    ],
+                    "animations":[
+                        "glacivon_shadow_walk"
+                    ]
+                },
+                "warrior_use33": {
+                    "transitions": [
+                        {"default": "(query.get_equipped_item_name == 'grayson')"}
+                    ],
+                    "on_entry":[
+                        "/scoreboard players set @s grayson3 0"
+                    ]
+                }
+            }
+        },
+        "controller.animation.grayson4": {
+            "initial_state": "default",
+            "states": {
+                "default":{
+                    "transitions": [
+                        {"warrior_use4": "(query.get_equipped_item_name == 'grayson') && (query.is_sneaking) && (!query.is_using_item) && (variable.attack_time > 0.0)"}
+                    ]
+                },
+                "warrior_use4": {
+                    "transitions": [
+                        {"warrior_use41": "(query.get_equipped_item_name == 'grayson') && query.scoreboard('grayson4') <= 2 && query.scoreboard('grayson4') >= 1"}
+                    ],
+                    "animations":[
+                        "grayson_spin"
+                    ]
+                },
+                "warrior_use41": {
+                    "transitions": [
+                        {"default": "(query.get_equipped_item_name == 'grayson')"}
+                    ],
+                    "on_entry":[
+                        "/scoreboard players set @s grayson4 0"
+                    ]
+                }
+            }
+        },
+        "controller.animation.grayson5": {
+            "initial_state": "default",
+            "states": {
+                "default":{
+                    "transitions": [
+                        {"solvayne_radiant_tome_use3": "(query.get_equipped_item_name == 'grayson') && (query.is_sneaking) && (query.is_jumping)"}
+                    ]
+                },
+                "solvayne_radiant_tome_use3": {
+                    "transitions": [
+                        {"solvayne_radiant_tome_use31": "(query.get_equipped_item_name == 'grayson') && query.scoreboard('grayson5') <= 2 && query.scoreboard('grayson5') >= 1"}
+                    ], 
+                    "animations":[
+                        "grayson.end_slash"
+                    ]
+                },
+                "solvayne_radiant_tome_use31": {
+                    "transitions": [
+                        {"default": "(query.get_equipped_item_name == 'grayson')"}
+                    ],
+                    "on_entry":[
+                        "/scoreboard players set @s grayson5 0"
+                    ]
+                }
+            }
+        }
+    }
+}

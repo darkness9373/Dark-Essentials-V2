@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "custom:glacivon_aura",
+      "materials": {
+        "default": "enderman"
+      },
+      "textures": {
+        "default": "textures/entity/glacivon_fist/glacivon_aura"
+      },
+      "geometry": {
+        "default": "geometry.glacivon.aura"
+      },
+      "scripts": {
+				"animate": [
+					"controller"
+				]
+			},
+			"animations": {
+				"controller": "controller.animation.chain.general",
+				"spawned": "animation.aura"
+	  },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

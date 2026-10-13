@@ -1,0 +1,492 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.baelroth.sky": {
+      "animation_length": 10,
+      "timeline": {
+        "0.0": [
+          "/summon custom:strom ~ ~ ~ facing ^ ^ ^1000",
+          "/tag @p add vault",
+          "/summon custom:doom_awk_4",
+          "/effect @p levitation 1 30 true",
+          "/playsound armor.equip_leather @a[r=30] ~~~ 0.8 1.4",
+          "/playsound mob.breeze.shoot @a[r=30] ~~~ 0.8 1.1",
+          "/playsound mob.enderdragon.flap @a[r=30] 0.6 1.5"
+        ],
+        "0.225": [
+          "/effect @p levitation 0 0 true",
+          "/effect @p slow_falling 10 2 true"
+        ],
+        "5.0": "/tag @p remove vault",
+        "7.0": "/scoreboard players set @p baelroth1 2"
+      }
+    },
+    "animation.baelroth.spearfall": {
+      "animation_length": 10,
+      "timeline": {
+        "0.0": [
+        "/summon custom:strom ~ ~ ~ facing ^ ^ ^1000",
+           "/tag @p add ssp",
+          "/tp @p ~~~ ~ 0"
+        ],
+        "0.0417": [
+          "/playsound items.beast_emerge @a[r=30]",
+          "/summon custom:baelroth_spike ~ ~ ~ facing ^ ^ ^1000"
+        ],
+        "0.25": [
+          "/execute at @e[type=custom:baelroth_spike] run summon new:mental ^^^2",
+          "/execute at @e[type=custom:baelroth_spike] run summon custom:crack ^^^2", 
+          "/playsound items.baelroth_slash3 @a[r=30]",
+          "/execute at @e[type=custom:baelroth_spike] run particle new:baelroth_impact ^^^2",
+          "/execute at @e[type=custom:baelroth_spike] run damage @e[r=5,tag=!ssp] 10"
+        ],
+        "0.5417": [
+          "/execute at @e[type=custom:baelroth_spike] run summon new:mental ^^^5",
+          "/execute at @e[type=custom:baelroth_spike] run summon custom:crack ^^^5", 
+          "/playsound items.baelroth_slash3 @a[r=30]",
+          "/execute at @e[type=custom:baelroth_spike] run particle new:baelroth_impact ^^^5",
+          "/execute at @e[type=custom:baelroth_spike] run damage @e[r=7,tag=!ssp] 10"
+        ],
+        "0.7917": [
+          "/execute at @e[type=custom:baelroth_spike] run summon new:mental ^^^8",
+         "/execute at @e[type=custom:baelroth_spike] run summon custom:crack ^^^8", 
+          "/playsound items.baelroth_slash3 @a[r=30]",
+          "/execute at @e[type=custom:baelroth_spike] run particle new:baelroth_impact ^^^8",
+          "/execute at @e[type=custom:baelroth_spike] run damage @e[r=5,tag=!ssp] 10"
+        ],
+        "1.0417": [
+          "/execute at @e[type=custom:baelroth_spike] run summon new:mental ^^^10",
+          "/execute at @e[type=custom:baelroth_spike] run summon custom:crack ^^^10", 
+          "/playsound items.baelroth_slash3 @a[r=30]",
+          "/execute at @e[type=custom:baelroth_spike] run particle new:baelroth_impact ^^^10",
+          "/execute at @e[type=custom:baelroth_spike] run damage @e[r=5,tag=!ssp] 10"
+        ],
+        "2.0": [
+          "/playsound items.baelroth_slash3 @a[r=30]",
+          "/tag @p remove ssp"
+        ],
+        "2.25": [
+        "/playsound items.stone_break @a[r=30]"
+        ],
+        "2.5": [
+        "/playsound items.stone_break @a[r=30]"
+        ],
+        "2.75": [
+        "/playsound items.stone_break @a[r=30]"
+        ],
+        "3.0": [
+        "/playsound items.stone_break @a[r=30]"
+        ],
+		"3.5": [
+		"/title @s actionbar §a§f██████████ §eYou must wait 7.0 second before casting this spell."
+		],
+		"4.0": [
+		"/title @s actionbar §a██§f████████ §eYou must wait 6.0 second before casting this spell."
+	    ],
+	    "4.5": [
+		"/title @s actionbar §a███§f███████ §eYou must wait 5.0 second before casting this spell."
+		],
+		"5.0": [
+		"/title @s actionbar §a█████§f█████ §eYou must wait 4.0 second before casting this spell."
+	    ],
+		"5.5": [
+		"/title @s actionbar §a██████§f████ §eYou must wait 3.0 second before casting this spell."
+		],
+		"6.0": [
+		"/title @s actionbar §a████████§f██ §eYou must wait 2.0 second before casting this spell."
+		],
+		"6.5": [
+		"/title @s actionbar §a██████████ §eYou must wait 1.0 second before casting this spell."
+        ],
+        "7.0": "/scoreboard players set @p baelroth2 2"
+      }
+    },
+    "animation.spear.flinger": {
+      "animation_length": 18,
+      "timeline": {
+        "0.0": [
+        "/summon custom:strom ~ ~ ~ facing ^ ^ ^1000",
+          "/gamerule falldamage false",
+          "/tag @s add pr1",
+          "/summon custom:spear_shot ~ ~ ~ facing ^ ^ ^1000",
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ~ ~ ~",
+          "/playsound items.magical_spear_summon @a[r=30] ~ ~ ~"
+        ],
+        "0.125": "/playanimation @e[type=custom:spear_shot,r=5] animation.spear_shot",
+        "3.0": [
+        "/playsound items.magical_spear_shoot @a[r=30] ~ ~ ~"
+        ],
+        "3.5": [
+        "/playsound items.magical_spear_shoot_single @a[r=30] ~ ~ ~",
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^1",
+        "/execute at @s positioned ^ ^ ^1 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s"
+        ],
+        "3.58": [
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^4",
+        "/execute at @s positioned ^ ^ ^4 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s"
+        ],
+        "3.6": [
+        "/playsound items.magical_spear_shoot_single @a[r=30] ~ ~ ~",
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^1",
+        "/execute at @s positioned ^ ^ ^1 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s"
+        ],
+        "3.67": [
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^7",
+        "/execute at @s positioned ^ ^ ^7 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s"
+        ],
+        "3.71": [
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^4",
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^10",
+        "/execute at @s positioned ^ ^ ^4 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s",
+        "/execute at @s positioned ^ ^ ^10 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s"
+        ],
+        "3.83": [
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^7",
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^14",
+        "/execute at @s positioned ^ ^ ^7 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s",
+        "/execute at @s positioned ^ ^ ^14 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s"
+        ],
+        "3.9": [
+        "/playsound items.magical_spear_shoot_single @a[r=30] ~ ~ ~",
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^1",
+        "/execute at @s positioned ^ ^ ^1 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s"
+        ],
+        "3.96": [
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^10",
+        "/execute at @s positioned ^ ^ ^10 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s"
+        ],
+        "4.08": [
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^4",
+        "/execute at @s positioned ^ ^ ^4 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s"
+        ],
+        "4.2": [
+        "/playsound items.magical_spear_shoot_single @a[r=30] ~ ~ ~",
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^1",
+        "/execute at @s positioned ^ ^ ^1 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s"
+        ],
+        "4.1": [
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^7",
+        "/execute at @s positioned ^ ^ ^7 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s"
+        ],
+        "4.2": [
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^4",
+        "/execute at @s positioned ^ ^ ^4 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s"
+        ],
+        "4.25": [
+        "/execute at @s positioned ^ ^ ^10 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s",
+        "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^10",
+        "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^13",
+        "/execute at @s positioned ^ ^ ^13 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s"
+        ],
+        "4.3": [
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^7",
+        "/execute at @s positioned ^ ^ ^7 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s"
+        ],
+        "4.4": [
+        "/playsound items.magical_spear_shoot_single @a[r=30] ~ ~ ~",
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^1",
+        "/execute at @s positioned ^ ^ ^1 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s"
+        ],
+        "4.51": [
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^4",
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^10",
+        "/execute at @s positioned ^ ^ ^4 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s",
+        "/execute at @s positioned ^ ^ ^10 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s"
+        ],
+        "4.6": [
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^7",
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^14",
+        "/execute at @s positioned ^ ^ ^7 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s",
+        "/execute at @s positioned ^ ^ ^14 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s"
+        ],
+        "4.7": [
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^12",
+        "/execute at @s positioned ^ ^ ^12 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s"
+        ],
+        "4.83": [
+          "/execute at @e[type=custom:spear_shot] run particle new:baelroth_impact ^^^14",
+        "/execute at @s positioned ^ ^ ^14 run damage @e[tag=!passive,tag=!pr1,r=3,type=!item,type=!armor_stand] 2 sonic_boom entity @s",
+        "/gamerule falldamage true",
+        "/tag @s remove pr1"
+        ],
+		"5.0": [
+		"/title @s actionbar §a§f██████████ §eYou must wait 14.0 second before casting this spell."
+		],
+		"7.0": [
+		"/title @s actionbar §a██§f████████ §eYou must wait 12.0 second before casting this spell."
+	    ],
+	    "9.0": [
+		"/title @s actionbar §a███§f███████ §eYou must wait 10.0 second before casting this spell."
+		],
+		"11.0": [
+		"/title @s actionbar §a█████§f█████ §eYou must wait 8.0 second before casting this spell."
+	    ],
+		"13.0": [
+		"/title @s actionbar §a██████§f████ §eYou must wait 6.0 second before casting this spell."
+		],
+		"15.0": [
+		"/title @s actionbar §a████████§f██ §eYou must wait 4.0 second before casting this spell."
+		],
+		"17.0": [
+		"/title @s actionbar §a██████████ §eYou must wait 2.0 second before casting this spell."
+	    ],
+        "17.5": "/scoreboard players set @p baelroth3 2"
+      }
+    },
+    "animation.wind.arrow": {
+      "animation_length": 24.5,
+      "timeline": {
+        "0.0": [
+          "/tag @p add wa", 
+          "/summon custom:cakar ~ ~ ~ facing ^ ^ ^1000", 
+          "/execute at @e[type=custom:cakar] run particle new:baelroth_impact ^^^",
+          "/execute at @e[type=custom:cakar] run execute at @e[type=!item,family=!damage,family=!can_ride,r=1,tag=!wa] run effect slowness 2 255 true", 
+          "/execute at @e[r=1,tag=!wa] run particle ds:swamp_puddleburst ^^^", 
+          "/playsound claw_slash @a[r=30] ~ ~ ~"
+         ],
+		"0.45": [
+		  "/playsound claw_slash @a[r=30] ~ ~ ~", 
+		  "/execute at @e[type=custom:cakar] run particle new:baelroth_slash ^^^2",
+          "/execute at @e[type=custom:cakar] run damage @e[r=5,tag=!wa] 16"
+        ],
+		"1.0": [  
+		   "/summon custom:naga ^^^2 facing ^ ^ ^1000", 
+		   "/playsound items.rowr1 @a[r=30]"
+		  ],
+		"1.5": [  
+		 "/playsound items.rowr2 @a[r=30]",
+	     "/playsound items.duar @a[r=30]",
+	      "/playsound item.trident.hit @a[r=50] ~~~ 100",
+          "/playsound breeze_wind_charge.burst @a[r=50] ~~~ 100 0.7",
+          "/playsound mob.breeze.slide @a[r=50] ~~~ 100 1.1",
+          "/playsound game.player.attack.nodamage @a[r=50] ~~~ 100 0.8",
+          "/playsound mob.wither.shoot @a[r=50] ~~~ 100 1.8",
+          "/playsound mob.warden.death @a[r=50] ~~~ 100 0.65",
+          "/playsound mob.warden.attack @a[r=50] ~~~ 100 0.4",
+          "/playsound random.explode @a[r=50] ~~~ 100 0.7",
+          "/playsound random.glass @a[r=50] ~~~ 100 0.4",
+          "/playsound items.break @a[r=50]",
+          "/execute at @e[type=custom:naga] run particle new:baelroth_slash ^^^2",
+		 "/execute at @e[type=custom:naga] run summon custom:baelroth_throns ^^1^",
+		  "/execute at @e[type=custom:naga] run damage @e[r=5,tag=!wa] 18", 
+		 "/summon custom:crack ^^1.1^1"
+		],
+		"1.7": [  
+		"/particle ds:swamp_puddleburst ^^^"
+		 ],
+		"2.0": [
+		"/title @s actionbar §a§f██████████ §eYou must wait 20.0 second before casting this spell."
+		],
+		"19.0": [
+		"/title @s actionbar §a██§f████████ §eYou must wait 4.0 second before casting this spell."
+	    ],
+	    "20.0": [
+		"/title @s actionbar §a███§f███████ §eYou must wait 3.0 second before casting this spell."
+		],
+		"21.0": [
+		"/title @s actionbar §a█████§f█████ §eYou must wait 2.0 second before casting this spell."
+	    ],
+		"22.0": [
+		"/title @s actionbar §a██████§f████ §eYou must wait 1.0 second before casting this spell."
+        ],
+        "23.75": "/tag @p remove wa",
+        "24.0": "/scoreboard players set @p baelroth4 2"
+      }
+    },
+    "animation.wind.windbound": {
+      "animation_length": 56.5,
+      "timeline": {
+        "0.0": [
+          "/summon custom:tanda",
+          "/tag @p add bc",
+          "/playsound items.tanda @a[r=30]"
+        ],
+        "0.125": [
+          "/execute at @e[type=custom:tanda] run particle new:bs"
+         ],
+        "0.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain0 ^^^"
+        ],
+        "1.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"
+        ],
+        "1.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain1 ^-3^^-3"
+         ],
+        "2.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"
+        ],
+        "2.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain2 ^3^^-3"
+        ],
+        "3.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"
+        ],
+        "4.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain0 ^5^^5"
+        ],
+        "5.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"
+        ],
+        "5.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain1 ^-5^^-5"
+         ],
+        "6.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"
+        ],
+        "6.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain2 ^5^^-5"
+        ],
+        "7.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"  
+        ],
+        "8.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain0 ^7^^7"
+        ],
+        "9.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"
+        ],
+        "9.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain1 ^-7^^-7"
+         ],
+        "10.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"
+        ],
+        "10.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain2 ^9^^-9"
+        ],
+        "11.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"  
+       ],
+        "11.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain0 ^5^^5"
+        ],
+        "12.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"
+        ],
+        "12.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain1 ^-10^^-10"
+         ],
+        "13.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"
+        ],
+        "13.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain2 ^3^^-3"
+        ],
+        "14.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"  
+               ],
+        "14.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain0 ^9^^9"
+        ],
+        "15.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"
+        ],
+        "15.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain1 ^-6^^-6"
+         ],
+        "16.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"
+        ],
+        "17.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain2 ^8^^-8"
+        ],
+        "18.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"  
+        ],
+        "18.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain0 ^3^^3"
+        ],
+        "19.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"
+        ],
+        "19.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain1 ^-3^^-3"
+         ],
+        "20.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"
+        ],
+        "20.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain2 ^3^^-3"
+        ],
+        "21.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"  
+               ],
+        "21.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain0 ^4^^4"
+        ],
+        "22.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain0,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"
+        ],
+        "22.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain1 ^-6^^-6"
+         ],
+        "23.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain1,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"
+        ],
+        "23.5": [
+        "/execute at @e[type=custom:tanda] run summon custom:spear_rain2 ^9^^-9"
+        ],
+        "24.375": [
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run damage @e[r=10,tag=!bc] 17",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run playsound items.ground_smash @a[r=30]",
+          "/execute at @e[type=custom:tanda] run execute at @e[type=custom:spear_rain2,r=13] run summon custom:strom ~ ~ ~ facing ^ ^ ^1000"  
+
+        ],
+        "25.0": [
+        "/tag @p remove bc"
+        ],
+   	    "26.0": [
+         "/title @s actionbar §a█§f█████████ §eYou must wait 30 second"
+        ],
+        "46.0": [
+        "/title @s actionbar §a███§f███████ §eYou must wait 10 second"
+        ],
+        "56.0": [
+        "/title @s actionbar §a██████████ §eYou must wait 1 second"
+        ],
+        "56.25": "/scoreboard players set @p baelroth5 2"
+      }
+    }
+  }
+}

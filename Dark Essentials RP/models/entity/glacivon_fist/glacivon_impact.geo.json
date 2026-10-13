@@ -1,0 +1,35 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.glacivon_impact",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 6,
+				"visible_bounds_offset": [0, -2, 0]
+			},
+			"bones": [
+				{
+					"name": "h_body",
+					"pivot": [0, -45, 0],
+					"cubes": [
+						{
+							"origin": [-35.5, -80.5, 0],
+							"size": [71, 71, 0],
+							"uv": {
+								"north": {"uv": [64, 0], "uv_size": [-64, 64], "uv_rotation": 180},
+								"east": {"uv": [0, 0], "uv_size": [16, 0], "uv_rotation": 270},
+								"south": {"uv": [64, 64], "uv_size": [-64, 0]},
+								"west": {"uv": [0, 0], "uv_size": [16, 0], "uv_rotation": 90},
+								"up": {"uv": [16, 0], "uv_size": [-16, 0], "uv_rotation": 180},
+								"down": {"uv": [16, 0], "uv_size": [-16, 0]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

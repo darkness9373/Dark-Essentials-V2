@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.tanda": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 3,
+			"bones": {
+				"death_landing_vfx": {
+					"position": [0, 10, 0]
+				},
+				"death_landing_vfx_summoner": {
+					"scale": {
+						"0.0": [0, 0, 0],
+						"0.25": [1, 1, 1]
+					}
+				},
+				"death_landing_vfx_radius": {
+					"scale": {
+						"0.0": [0, 0, 0],
+						"0.2917": [1, 1, 1]
+					}
+				},
+				"death_landing_vfx_cooldown": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"3.0": [0, 360, 0]
+					},
+					"scale": {
+						"0.0": [0, 0, 0],
+						"3.0": [1, 1, 1]
+					}
+				}
+			}
+		}
+	}
+}

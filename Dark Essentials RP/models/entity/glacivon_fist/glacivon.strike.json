@@ -1,0 +1,82 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.glacivon.strike",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 6,
+				"visible_bounds_offset": [0, 2, 0]
+			},
+			"bones": [
+				{
+					"name": "1",
+					"pivot": [0, 26, 0]
+				},
+				{
+					"name": "body",
+					"parent": "1",
+					"pivot": [0, 26, -24.019],
+					"cubes": [
+						{
+							"origin": [-20, 6, -18.019],
+							"size": [40, 40, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16], "uv_rotation": 90},
+								"east": {"uv": [0, 0], "uv_size": [16, 0], "uv_rotation": 90},
+								"south": {"uv": [0, 16], "uv_size": [16, -16], "uv_rotation": 90},
+								"west": {"uv": [0, 0], "uv_size": [16, 0], "uv_rotation": 270},
+								"up": {"uv": [16, 0], "uv_size": [-16, 0]},
+								"down": {"uv": [16, 0], "uv_size": [-16, 0], "uv_rotation": 180}
+							}
+						}
+					]
+				},
+				{
+					"name": "body2",
+					"parent": "1",
+					"pivot": [0, 26, -24.019],
+					"cubes": [
+						{
+							"origin": [-20, 6, -18.019],
+							"size": [40, 40, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16], "uv_rotation": 90},
+								"east": {"uv": [0, 0], "uv_size": [16, 0], "uv_rotation": 90},
+								"south": {"uv": [0, 16], "uv_size": [16, -16], "uv_rotation": 90},
+								"west": {"uv": [0, 0], "uv_size": [16, 0], "uv_rotation": 270},
+								"up": {"uv": [16, 0], "uv_size": [-16, 0]},
+								"down": {"uv": [16, 0], "uv_size": [-16, 0], "uv_rotation": 180}
+							}
+						}
+					]
+				},
+				{
+					"name": "body3",
+					"parent": "1",
+					"pivot": [0, 26, -24.019],
+					"cubes": [
+						{
+							"origin": [-20, 6, -18.019],
+							"size": [40, 40, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16], "uv_rotation": 90},
+								"east": {"uv": [0, 0], "uv_size": [16, 0], "uv_rotation": 90},
+								"south": {"uv": [0, 16], "uv_size": [16, -16], "uv_rotation": 90},
+								"west": {"uv": [0, 0], "uv_size": [16, 0], "uv_rotation": 270},
+								"up": {"uv": [16, 0], "uv_size": [-16, 0]},
+								"down": {"uv": [16, 0], "uv_size": [-16, 0], "uv_rotation": 180}
+							}
+						}
+					]
+				},
+				{
+					"name": "hitbox",
+					"pivot": [0, 32, 0]
+				}
+			]
+		}
+	]
+}

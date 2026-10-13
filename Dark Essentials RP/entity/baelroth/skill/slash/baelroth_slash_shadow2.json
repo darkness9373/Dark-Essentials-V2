@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "custom:baelroth_slash_shadow2",
+      "materials": {
+        "default": "enderman"
+      },
+      "textures": {
+        "hdoom1": "textures/entity/baelroth_spear/baelroth_1_shadow",
+        "hdoom2": "textures/entity/baelroth_spear/baelroth_2_shadow",
+        "hdoom3": "textures/entity/baelroth_spear/baelroth_3_shadow",
+        "hdoom4": "textures/entity/baelroth_spear/baelroth_4_shadow",
+        "hdoom5": "textures/entity/baelroth_spear/baelroth_5_shadow",
+        "hdoom6": "textures/entity/baelroth_spear/baelroth_6_shadow",
+        "hdoom7": "textures/entity/baelroth_spear/baelroth_7_shadow",
+        "hdoom8": "textures/entity/baelroth_spear/baelroth_8_shadow",
+        "hdoom9": "textures/entity/slash/kosongg",
+        "hdoom10": "textures/entity/slash/kosongg",
+        "hdoom11": "textures/entity/slash/kosongg",
+        "hdoom12": "textures/entity/slash/kosongg"
+      },
+      "geometry": {
+        "baelroth": "geometry.shadow.baelroth2"
+      },
+      "render_controllers": [
+        "controller.render.baelrothslash"
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Dark Essentials RP",
+        "description": "Dark Essentials",
+        "uuid": "bb043d5c-e345-471b-b3f9-fe55952dd9bd",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 21, 0]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "6229502b-d73d-492e-8a30-dcec4025d063",
+            "version": [1, 0, 0]
+        }
+    ],
+    "metadata": {
+        "product_type": "addon"
+    }
+}

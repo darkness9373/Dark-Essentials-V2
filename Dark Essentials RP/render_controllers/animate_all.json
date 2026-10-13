@@ -1,0 +1,26 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.animate_all": {
+			"arrays": {
+				"textures": {
+				  "array.frames": [
+					"texture.frame_0"
+					
+				  ]
+				}
+			  },
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "variable.is_enchanted ? material.enchanted : material.default"
+				}
+			],
+			"textures": [ "temp.life_time = query.life_time * 10; return array.frames[temp.life_time];", "texture.enchanted" ]
+	}
+}
+}
+}	}
+	}
+}
+}

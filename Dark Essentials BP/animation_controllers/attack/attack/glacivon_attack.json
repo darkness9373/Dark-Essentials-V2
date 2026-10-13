@@ -1,0 +1,92 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.glacivon_attack": {
+      "states": {
+        "default": {
+          "on_entry": [
+            "/tag @s remove no_delay"
+          ],
+          "on_exit": [
+            "/tag @s add no_delay"
+          ],
+          "transitions": [
+            {
+              "default2": "variable.attack_time"
+            }
+          ]
+        },
+        "default2": {
+          "on_exit": [
+            "/scoreboard players set @s attack_delay 0"
+          ],
+          "transitions": [
+            {
+              "ns1": "variable.attack_time && !query.is_sneaking && q.get_equipped_item_name == 'glacivon'"
+            }
+          ]
+        },
+        "ns1": {
+          "on_entry": [
+            "/summon custom:glacivon_right_slash ~~~ facing ^^^1000",
+            "/playsound items.glacivon.attack @a[r=30] ~~~ 0.3 1",
+            "/tag @s add br1",
+            "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!br1,c=4,r=5] run particle new:glacivon_impact",
+            "/damage @e[type=!custom:baelroth_slash_1,r=5,type=!custom:vanish,tag=!br1] 5",
+            "/execute at @e[type=!custom:glacivon_right_slash,type=!custom:glacivon_left_slash,type=!custom:glacivon_up_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!br1,c=5,r=5,family=!damage,family=!can_ride] run summon custom:glacivon_impact", 
+            "/playsound items.glacivon.knock1 @a[r=30] ~~~ 0.3 1",
+            "/tag @s remove br1"
+          ],
+          "on_exit": [
+            "/scoreboard players set @s attack_delay 0"
+          ],
+          "transitions": [
+            {
+              "ns2": "variable.attack_time && query.scoreboard('attack_delay') >= 8 && !query.is_sneaking && q.get_equipped_item_name == 'glacivon'"
+            }
+          ]
+        },
+        "ns2": {
+          "on_entry": [
+            "/summon custom:glacivon_left_slash ~~~ facing ^^^1000",
+            "/playsound items.glacivon.attack @a[r=30] ~~~ 0.3 1",
+            "/tag @s add br2",
+            "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!br2,c=4,r=5] run particle new:glacivon_impact",
+            "/damage @e[type=!custom:baelroth_slash_2,r=5,type=!custom:vanish,tag=!br2] 5",
+            "/execute at @e[type=!custom:glacivon_right_slash,type=!custom:glacivon_left_slash,type=!custom:glacivon_up_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!br2,c=5,r=5,family=!damage,family=!can_ride] run summon custom:glacivon_impact", 
+            "/playsound items.glacivon.knock2 @a[r=30] ~~~ 0.3 1",
+            "/tag @s remove br2"
+          ],
+          "on_exit": [
+            "/scoreboard players set @s attack_delay 0"
+          ],
+          "transitions": [
+            {
+              "ns3": "variable.attack_time && query.scoreboard('attack_delay') >= 8 && !query.is_sneaking && q.get_equipped_item_name == 'glacivon'"
+            }
+          ]
+        },
+        "ns3": {
+          "on_entry": [
+             "/summon custom:glacivon_up_slash ~~~ facing ^^^1000",
+             "/playsound items.glacivon.attack @a[r=30] ~~~ 0.3 1",
+            "/tag @s add br3",
+            "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!br3,c=4,r=5] run particle new:glacivon_impact",
+            "/damage @e[type=!custom:baelroth_thrust,r=5,type=!custom:vanish,tag=!br3] 5",
+            "/execute at @e[type=!custom:glacivon_right_slash,type=!custom:glacivon_left_slash,type=!custom:glacivon_up_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!br3,c=5,r=5,family=!damage,family=!can_ride] run summon custom:glacivon_impact", 
+            "/playsound items.glacivon.knock3 @a[r=30] ~~~ 0.3 1",
+            "/tag @s remove br3"
+          ],
+          "on_exit": [
+            "/scoreboard players set @s attack_delay 0"
+          ],
+          "transitions": [
+            {
+              "ns1": "variable.attack_time && query.scoreboard('attack_delay') >= 8 && !query.is_sneaking && q.get_equipped_item_name == 'glacivon'"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

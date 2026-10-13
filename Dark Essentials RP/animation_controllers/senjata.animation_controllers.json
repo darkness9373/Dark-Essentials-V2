@@ -1,0 +1,30 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.senjata.wield": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"wield_off_hand_first_person": "c.item_slot != 'main_hand' && !query.item_is_charged"
+						}
+					],
+					"transitions": [
+						{
+							"third_person": "!c.is_first_person"
+						}
+					]
+				},
+				"third_person": {
+					"animations": [ "wield_third_person" ],
+					"transitions": [
+						{
+							"default": "c.is_first_person"
+						}
+					]
+				}
+			}
+		}
+	}
+}

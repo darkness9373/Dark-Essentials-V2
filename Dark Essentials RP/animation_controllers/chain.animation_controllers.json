@@ -1,0 +1,26 @@
+//bridge-file-version: #124
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.chain.general": {
+			"initial_state": "spawned",
+			"states": {
+				"spawned": {
+					"animations": [
+						"spawned"
+					],
+					"transitions": [
+						{
+							"opened": "query.is_sheared"
+						}
+					]
+				},
+				"opened": {
+					"animations": [
+						"opened"
+					]
+				}
+			}
+		}
+	}
+}

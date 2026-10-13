@@ -1,0 +1,38 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.shadow.baelroth1",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 11,
+				"visible_bounds_height": 8,
+				"visible_bounds_offset": [0, 2, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [26, 24, -6],
+					"rotation": [0, -90, -150],
+					"cubes": [
+						{
+							"origin": [42.81192, 18.56625, -68.70547],
+							"size": [70, 0, 70],
+							"pivot": [51, 16, -2],
+							"rotation": [61.51876, 9.84655, -162.50476],
+							"uv": {
+								"north": {"uv": [16, 0], "uv_size": [-5.5082, 0]},
+								"east": {"uv": [16, 0], "uv_size": [-5.5082, 0]},
+								"south": {"uv": [16, 0], "uv_size": [-5.5082, 0]},
+								"west": {"uv": [16, 0], "uv_size": [-5.5082, 0]},
+								"up": {"uv": [0, 0], "uv_size": [15.75541, 15.68]},
+								"down": {"uv": [10.4918, 0], "uv_size": [5.5082, 0]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

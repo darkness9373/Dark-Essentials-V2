@@ -1,0 +1,22 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "custom:grayson_spin",
+      "materials": {
+        "default": "enderman"
+      },
+      "textures": {
+        "spin1": "textures/entity/grayson_katana/grayson_spin_1",
+        "spin2": "textures/entity/grayson_katana/grayson_spin_2",
+        "spin3": "textures/entity/grayson_katana/grayson_spin_3"
+      },
+      "geometry": {
+        "spin": "geometry.grayson_spin"
+      },
+      "render_controllers": [
+        "controller.render.spin"
+      ]
+    }
+  }
+}

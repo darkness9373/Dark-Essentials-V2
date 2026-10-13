@@ -1,0 +1,331 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.glacivon.blink": {
+      "animation_length": 10,
+      "timeline": {
+        "0.0": [
+          "/tag @s add blink",
+          "/execute at @p[tag=blink] run summon custom:glacivon_shadow ~~~ facing ^^^1000",
+          "/summon custom:glacivon_dash ~~~ facing ^^^1000",
+          "/summon custom:glacivon_retak ~ ~ ~ facing ^ ^ ^1000",
+          "/execute at @p[tag=blink] run summon new:maju_glacivon ^^^-2",
+          "/particle custom:glacivon_dash ~ ~ ~",
+          "/effect @s speed 5 2 true",
+          "/playsound items.dash @a[r=30] ~ ~ ~ 1.5"
+        ],
+        "1.0": [
+          "/particle custom:glacivon_dash ~ ~ ~",
+          "/title @s actionbar §a█§f█████████ §eYou must wait 8 second"
+        ],
+        "4.0": [
+          "/execute at @p[tag=blink] run tp @s @e[type=custom:glacivon_shadow,c=1]",
+          "/particle custom:glacivon_dash ~ ~ ~",
+          "/particle custom:glacivon_circle ~ ~ ~",
+          "/execute at @s run effect @e[r=3,tag=!blink,family=!damage,family=!can_ride] slowness 1 3 true",
+          "/execute at @s run effect @e[r=3,tag=!blink,family=!damage,family=!can_ride] wither 1 3 true",
+          "/tag @s remove blink"
+        ],
+        "4.2": [
+          "/particle custom:glacivon_dash ~ ~ ~",
+          "/playsound items.tp @a[r=30]" 
+        ],
+        "8.0": [
+          "/title @s actionbar §a██████████ §eYou must wait 1 second"
+        ],
+        "9.0": [
+        "/scoreboard players set @p glacivon1 2"
+        ]
+      }
+    },
+    "animation.glacivon.phoenix.punch": {
+      "animation_length": 10,
+      "timeline": {
+        "0.0": [
+           "/tag @p add ddd",
+            "/summon custom:glacivon_aura ~~~ facing ^^^1000", 
+            "/effect @e [r=5,tag=!ddd] wither 3 100 true", 
+            "/playsound items.auraaa @a[r=30]", 
+            "/effect @e[type=custom:glacivon_aura,r=3,tag=!ddd,family=!damage,family=!can_ride] wither 1 3 true"
+         ],
+		"0.75": [
+		    "/summon custom:glacivon_phoenix ~~~ facing ^^^1000", 
+		    "/playsound phoenix.summon @a[r=30]", 
+		    "/playsound phoenix.suara @a[r=30]"
+	    ],
+		"1.75": [
+		"/execute at @e[type=custom:glacivon_phoenix,r=13] run damage @e[r=10,tag=!ddd] 17",
+	    "/execute at @s positioned ^ ^ ^1 run damage @e[tag=!passive,tag=!ddd,r=3,type=!item,type=!armor_stand] 3", 
+		"/execute at @e[type=custom:glacivon_phoenix] run particle new:glacivon_impact1 ^^^1"
+		],
+		"2.0": [
+		"/execute at @e[type=custom:glacivon_phoenix,r=13] run damage @e[r=10,tag=!ddd] 17",
+		"/execute at @s positioned ^ ^ ^4 run damage @e[tag=!passive,tag=!ddd,r=3,type=!item,type=!armor_stand] 4", 
+		"/execute at @e[type=custom:glacivon_phoenix] run particle new:glacivon_impact1 ^^^4"
+		],
+		"2.1": [
+		"/execute at @e[type=custom:glacivon_phoenix,r=13] run damage @e[r=10,tag=!ddd] 17",
+		"/execute at @s positioned ^ ^ ^6 run damage @e[tag=!passive,tag=!ddd,r=3,type=!item,type=!armor_stand] 5", 
+		"/execute at @e[type=custom:glacivon_phoenix] run particle new:glacivon_impact1 ^^^6"
+	    ],
+		"2.2": [
+		"/execute at @e[type=custom:glacivon_phoenix,r=13] run damage @e[r=10,tag=!ddd] 17",
+		"/execute at @s positioned ^ ^ ^8 run damage @e[tag=!passive,tag=!ddd,r=3,type=!item,type=!armor_stand] 6", 
+		"/execute at @e[type=custom:glacivon_phoenix] run particle new:glacivon_impact1 ^^^8"
+		],
+		"2.3": [
+		"/execute at @e[type=custom:glacivon_phoenix,r=13] run damage @e[r=10,tag=!ddd] 17",
+		"/execute at @s positioned ^ ^ ^9 run damage @e[tag=!passive,tag=!ddd,r=3,type=!item,type=!armor_stand] 7", 
+		"/execute at @e[type=custom:glacivon_phoenix] run particle new:glacivon_impact1 ^^^9"
+		],
+		"2.4": [
+		"/execute at @e[type=custom:glacivon_phoenix,r=13] run damage @e[r=10,tag=!ddd] 17",
+		"/execute at @s positioned ^ ^ ^10 run damage @e[tag=!passive,tag=!ddd,r=3,type=!item,type=!armor_stand] 8", 
+		"/execute at @e[type=custom:glacivon_phoenix] run particle new:glacivon_impact1 ^^^10"
+		],
+		"2.5": [
+		"/execute at @e[type=custom:glacivon_phoenix,r=13] run damage @e[r=10,tag=!ddd] 17",
+		"/execute at @s positioned ^ ^ ^12 run damage @e[tag=!passive,tag=!ddd,r=3,type=!item,type=!armor_stand] 9", 
+		"/execute at @e[type=custom:glacivon_phoenix] run particle new:glacivon_impact1 ^^^12"
+		],
+		"2.59": [
+		"/execute at @e[type=custom:glacivon_phoenix,r=13] run damage @e[r=10,tag=!ddd] 17",
+		"/execute at @s positioned ^ ^ ^12 run damage @e[tag=!passive,tag=!ddd,r=3,type=!item,type=!armor_stand] 10", 
+		"/execute at @e[type=custom:glacivon_phoenix] run particle new:glacivon_impact1 ^^^12",
+		"/execute at @e[type=custom:glacivon_phoenix] run particle custom:glacivon_explosion_impact ^^^14"
+        ],
+		"2.7": [
+		  "/effect @s[tag=ddd] invisibility 0 0",
+          "/tag @p remove ddd"
+        ],
+		"3.5": [
+		"/title @s actionbar §a§f██████████ §eYou must wait 7.0 second before casting this spell."
+		],
+		"4.0": [
+		"/title @s actionbar §a██§f████████ §eYou must wait 6.0 second before casting this spell."
+	    ],
+	    "4.5": [
+		"/title @s actionbar §a███§f███████ §eYou must wait 5.0 second before casting this spell."
+		],
+		"5.0": [
+		"/title @s actionbar §a█████§f█████ §eYou must wait 4.0 second before casting this spell."
+	    ],
+		"5.5": [
+		"/title @s actionbar §a██████§f████ §eYou must wait 3.0 second before casting this spell."
+		],
+		"6.0": [
+		"/title @s actionbar §a████████§f██ §eYou must wait 2.0 second before casting this spell."
+		],
+		"6.5": [
+		"/title @s actionbar §a██████████ §eYou must wait 1.0 second before casting this spell."
+        ],
+        "7.0": "/scoreboard players set @p glacivon2 2"
+      }
+    },
+    "animation.glacivon.tornado": {
+      "animation_length": 20,
+      "timeline": {
+        "0.5": [
+          "/summon custom:arena_glacivon ~ ~ ~",
+          "/summon custom:glacivon_boom ~ ~ ~",
+          "/tag @s add skill3",
+          "/effect @e[tag=!skill3,r=10,family=!damage] slowness 7 4 true",
+          "/effect @e[tag=!skill3,r=10,family=!damage] wither 7 2 true",
+          "/playsound item.trident.hit @a[r=50] ~~~ 100",
+          "/playsound breeze_wind_charge.burst @a[r=50] ~~~ 100 0.7",
+          "/playsound mob.breeze.slide @a[r=50] ~~~ 100 1.1",
+          "/playsound game.player.attack.nodamage @a[r=50] ~~~ 100 0.8",
+          "/playsound mob.wither.shoot @a[r=50] ~~~ 100 1.8"
+        ],
+		"1.5": [  
+		"/playsound item.trident.hit @a[r=50] ~~~ 100",
+          "/playsound breeze_wind_charge.burst @a[r=50] ~~~ 100 0.7",
+          "/playsound mob.breeze.slide @a[r=50] ~~~ 100 1.1",
+          "/playsound game.player.attack.nodamage @a[r=50] ~~~ 100 0.8",
+          "/playsound mob.wither.shoot @a[r=50] ~~~ 100 1.8"
+		],
+		"2.5": [
+		"/playsound item.trident.hit @a[r=50] ~~~ 100",
+          "/playsound breeze_wind_charge.burst @a[r=50] ~~~ 100 0.7",
+          "/playsound mob.breeze.slide @a[r=50] ~~~ 100 1.1",
+          "/playsound game.player.attack.nodamage @a[r=50] ~~~ 100 0.8",
+          "/playsound mob.wither.shoot @a[r=50] ~~~ 100 1.8"
+		],
+		"3.5": [
+		"/playsound item.trident.hit @a[r=50] ~~~ 100",
+          "/playsound breeze_wind_charge.burst @a[r=50] ~~~ 100 0.7",
+          "/playsound mob.breeze.slide @a[r=50] ~~~ 100 1.1",
+          "/playsound game.player.attack.nodamage @a[r=50] ~~~ 100 0.8",
+          "/playsound mob.wither.shoot @a[r=50] ~~~ 100 1.8"
+		],
+		"4.5": [
+		"/playsound item.trident.hit @a[r=50] ~~~ 100",
+          "/playsound breeze_wind_charge.burst @a[r=50] ~~~ 100 0.7",
+          "/playsound mob.breeze.slide @a[r=50] ~~~ 100 1.1",
+          "/playsound game.player.attack.nodamage @a[r=50] ~~~ 100 0.8",
+          "/playsound mob.wither.shoot @a[r=50] ~~~ 100 1.8"
+		],
+		"5.5": [
+		"/playsound item.trident.hit @a[r=50] ~~~ 100",
+        "/playsound breeze_wind_charge.burst @a[r=50] ~~~ 100 0.7",
+        "/playsound mob.breeze.slide @a[r=50] ~~~ 100 1.1",
+        "/playsound game.player.attack.nodamage @a[r=50] ~~~ 100 0.8",
+        "/playsound mob.wither.shoot @a[r=50] ~~~ 100 1.8"
+		],
+		"6.5": [
+		"/playsound item.trident.hit @a[r=50] ~~~ 100",
+        "/playsound breeze_wind_charge.burst @a[r=50] ~~~ 100 0.7",
+        "/playsound mob.breeze.slide @a[r=50] ~~~ 100 1.1",
+        "/playsound game.player.attack.nodamage @a[r=50] ~~~ 100 0.8",
+        "/playsound mob.wither.shoot @a[r=50] ~~~ 100 1.8"
+        ],
+		"7.0": [
+		"/title @s actionbar §a§f██████████ §eYou must wait 14.0 second before casting this spell."
+		],
+		"9.0": [
+		"/title @s actionbar §a██§f████████ §eYou must wait 12.0 second before casting this spell."
+	    ],
+	    "11.0": [
+		"/title @s actionbar §a███§f███████ §eYou must wait 10.0 second before casting this spell."
+		],
+		"13.0": [
+		"/title @s actionbar §a█████§f█████ §eYou must wait 8.0 second before casting this spell."
+	    ],
+		"15.0": [
+		"/title @s actionbar §a██████§f████ §eYou must wait 6.0 second before casting this spell."
+		],
+		"17.0": [
+		"/title @s actionbar §a████████§f██ §eYou must wait 4.0 second before casting this spell."
+		],
+		"19.0": [
+		"/title @s actionbar §a██████████ §eYou must wait 2.0 second before casting this spell."
+	    ],
+        "19.5": "/scoreboard players set @p glacivon3 2"
+      }
+    },
+    "animation.glacivon.deadly.squash": {
+      "animation_length": 25.5,
+      "timeline": {
+        "0.0": [
+          "/tag @s add ss",
+          "/playsound items.deadly_squash_swing @a[r=30]",
+          "/summon custom:glacivon_deadly_squash ~ ~ ~ facing ^ ^ ^1000"
+        ],
+        "0.5": [
+         "/execute at @e[type=custom:glacivon_deadly_squash,tag=!ss,r=1]run summon custom:glacivon_aura ^^^2.5", 
+         "/execute at @e[type=custom:glacivon_deadly_squash,tag=!ss,r=1] run particle new:bs ^^^2.5", 
+         "/execute at @e[type=custom:glacivon_deadly_squash,tag=!ss,r=1] run particle new:janda3 ^^^2.5", 
+         "/execute at @e[type=custom:glacivon_deadly_squash,tag=!ss,r=1]run summon custom:glacivon_batu ^^^2.5", 
+          "/playsound items.deadly_squash_punch @a[r=30]",
+          "/playsound items.deadly_squash_smash @a[r=30]",
+          "/execute at @s positioned ^ ^ ^2.5 run damage @e[r=3,type=!armor_stand,tag=!ss] 25 entity_attack",
+          "/effect @e[tag=up] slowness 5 5 true"
+        ],
+        "1.5": [
+          "/playsound items.deadly_squash_swing @a[r=30]",
+          "/summon custom:glacivon_deadly_squash ~ ~ ~ facing ^ ^ ^1000"
+        ],
+        "2.0": [
+         "/execute at @e[type=custom:glacivon_deadly_squash,tag=!ss,r=1]run summon custom:glacivon_aura ^^^2.5", 
+         "/execute at @e[type=custom:glacivon_deadly_squash,tag=!ss,r=1] run particle new:bs ^^^2.5", 
+         "/execute at @e[type=custom:glacivon_deadly_squash,tag=!ss,r=1] run particle new:janda3 ^^^2.5", 
+         "/execute at @e[type=custom:glacivon_deadly_squash,tag=!ss,r=1]run summon custom:glacivon_batu ^^^2.5", 
+          "/playsound items.deadly_squash_punch @a[r=30]",
+          "/playsound items.deadly_squash_smash @a[r=30]",
+          "/execute at @s positioned ^ ^ ^2.5 run damage @e[r=3,type=!armor_stand,tag=!ss] 25 entity_attack",
+          "/effect @e[tag=up] slowness 5 5 true"
+        ],
+        "2.5": [
+         "/playsound items.deadly_squash_swing @a[r=30]",
+         "/summon custom:glacivon_deadly_squash ~ ~ ~ facing ^ ^ ^1000"
+        ],
+        "3.0": [
+        "/execute at @e[type=custom:glacivon_deadly_squash,tag=!ss,r=1]run summon custom:glacivon_aura ^^^2.5", 
+        "/execute at @e[type=custom:glacivon_deadly_squash,tag=!ss,r=1] run particle new:bs ^^^2.5", 
+        "/execute at @e[type=custom:glacivon_deadly_squash,tag=!ss,r=1] run particle new:janda3 ^^^2.5", 
+        "/execute at @e[type=custom:glacivon_deadly_squash,tag=!ss,r=1]run summon custom:glacivon_batu ^^^2.5", 
+        "/playsound items.deadly_squash_punch @a[r=30]",
+        "/playsound items.deadly_squash_smash @a[r=30]",
+        "/execute at @s positioned ^ ^ ^2.5 run damage @e[r=3,type=!armor_stand,tag=!ss] 25 entity_attack",
+        "/effect @e[tag=up] slowness 5 5 true"
+        ],
+        "3.1": [
+          "/title @s actionbar §a█§f█████████ §eYou must wait 20 second"
+        ],
+        "13.1": [
+          "/title @s actionbar §a███§f███████ §eYou must wait 10 second"
+        ],
+        "23.1": [
+          "/title @s actionbar §a██████████ §eYou must wait 1 second"
+        ],
+        "24.75": "/tag @p remove ss",
+        "25.0": "/scoreboard players set @p glacivon4 2"
+      }
+    },
+    "animation.glacivon.upercut": {
+      "animation_length": 34.5,
+      "timeline": {
+        "0.0": [
+          "/tag @p add up",
+          "/playsound items.tanda @a[r=30]"
+         ],
+        "0.15": [
+          "/effect @e[type=!custom:arena_glacivon,r=3] levitation 1 20 true",
+          "/playsound items.glacivon.attack @a[r=30]",
+          "/playsound items.deadly_squash_swing @a[r=30]"
+        ],
+        "0.30": [
+          "/effect @e[type=!custom:arena_glacivon,r=3] levitation 0 0 true",
+          "/summon custom:glacivon_up_slash ~~1~ facing ^^^1000", 
+          "/summon custom:glacivon_right_slash ~~1~ facing ^^^1000",
+          "/summon custom:glacivon_left_slash ~~1~ facing ^^^1000"
+        ],
+        "0.36": [
+          "/execute at @e[type=!custom:glacivon_right_slash,type=!custom:glacivon_left_slash,type=!custom:glacivon_up_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!up,c=5,r=5,family=!damage,family=!can_ride] run summon custom:glacivon_impact", 
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!up,c=4,r=5] run particle new:glacivon_impact",
+          "/damage @e[type=!custom:arena_glacivon,type=!custom:glacivon_up_slash,type=!custom:glacivon_right_slash,type=!custom:glacivon_left_slash,type=!custom:glacivon_impact,tag=!up,r=3] 30 entity_attack"
+        ],
+        "0.58": [
+          "/summon custom:knock_5 ~ ~ ~"
+        ],
+        "1.0": [
+          "/playsound items.deadly_squash_smash @a[r=30]",
+          "/playsound items.deadly_squash_swing @a[r=30]", 
+          "/summon custom:glacivon_right_slash ~~~ facing ^^^1000",
+          "/summon custom:glacivon_left_slash ~~~ facing ^^^1000",
+          "/execute at @e[type=!custom:glacivon_right_slash,type=!custom:glacivon_left_slash,type=!custom:glacivon_up_slash,type=!armor_stand,type=!item,type=!xp_orb,tag=!up,c=5,r=5,family=!damage,family=!can_ride] run summon custom:glacivon_impact", 
+          "/execute at @e[family=!damage,family=!can_ride,type=!custom:vanish,tag=!up,c=4,r=5] run particle new:glacivon_impact",
+         "/summon custom:glacivon_batu ~ ~ ~ facing ^ ^ ^1000",
+          "/damage @e[type=!custom:glacivon_batu,type=!custom:arena_glacivon,type=!custom:glacivon_up_slash,type=!custom:glacivon_right_slash,type=!custom:glacivon_left_slash,type=!custom:glacivon_impact,tag=!up,r=3] 30 entity_attack"
+         ],
+        "1.5": [
+        "/summon custom:glacivon_batu2 ~ ~ ~ facing ^ ^ ^1000",
+        "/playsound items.deadly_squash_smash @a[r=30]",
+        "/execute at @e[type=custom:glacivon_batu2,tag=!up,r=1] run particle new:bs ^^^", 
+        "/execute at @e[type=custom:glacivon_batu2,tag=!up,r=1] run particle new:janda3 ^^^", 
+        "/damage @e[type=!custom:glacivon_batu,type=!custom:glacivon_batu2,type=!custom:glacivon_batu3,tag=!up,r=5] 30 entity_attack"
+        ],
+        "2.0": [
+        "/summon custom:glacivon_batu3 ~ ~ ~ facing ^ ^ ^1000",
+        "/playsound items.deadly_squash_smash @a[r=30]",
+        "/execute at @e[type=custom:glacivon_batu2,tag=!up,r=1] run particle new:bs ^^^", 
+        "/execute at @e[type=custom:glacivon_batu2,tag=!up,r=1] run particle new:janda3 ^^^", 
+        "/damage @e[type=!custom:glacivon_batu,type=!custom:glacivon_batu2,type=!custom:glacivon_batu3,tag=!up,r=10] 30 entity_attack"
+        ],
+        "2.1": [
+        "/tag @s remove up"
+        ],
+   	    "2.5": [
+         "/title @s actionbar §a█§f█████████ §eYou must wait 30 second"
+        ],
+        "22.5": [
+        "/title @s actionbar §a███§f███████ §eYou must wait 10 second"
+        ],
+        "32.5": [
+        "/title @s actionbar §a██████████ §eYou must wait 1 second"
+        ],
+        "33.25": "/scoreboard players set @p glacivon5 2"
+      }
+    }
+  }
+}

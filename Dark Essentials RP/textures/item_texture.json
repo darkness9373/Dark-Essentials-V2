@@ -1,0 +1,26 @@
+{
+	"texture_data": {
+	    "baelroth": {
+			"textures": "textures/items/baelroth"
+        },
+	    "Baelroth Crystal": {
+			"textures": "textures/items/materials/baelroth Crystal"
+        },
+	    "Glacivon Crystal": {
+			"textures": "textures/items/materials/glacivon_crisytal"
+        },
+	    "baroth_shard": {
+			"textures": "textures/items/materials/baelroth_shard"
+        },
+	    "glacivon": {
+			"textures": "textures/items/glacivon"
+	    },
+	    "grayson": {
+			"textures": "textures/items/grayson"
+	    },
+	    "grayson shard": {
+			"textures": "textures/items/materials/grayson_shard"
+	    }
+		}
+	}
+}

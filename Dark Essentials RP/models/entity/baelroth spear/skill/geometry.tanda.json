@@ -1,0 +1,75 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.tanda",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 8,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "death_landing_vfx",
+					"pivot": [0, -10, 0]
+				},
+				{
+					"name": "death_landing_vfx_summoner",
+					"parent": "death_landing_vfx",
+					"pivot": [0, -9.8, 0],
+					"cubes": [
+						{
+							"origin": [-24, -9.7, -24],
+							"size": [48, 0, 48],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [48, 0]},
+								"east": {"uv": [0, 0], "uv_size": [48, 0]},
+								"south": {"uv": [0, 0], "uv_size": [48, 0]},
+								"west": {"uv": [0, 0], "uv_size": [48, 0]},
+								"up": {"uv": [96, 0], "uv_size": [48, 48]}
+							}
+						}
+					]
+				},
+				{
+					"name": "death_landing_vfx_radius",
+					"parent": "death_landing_vfx",
+					"pivot": [0, -9.9, 0],
+					"cubes": [
+						{
+							"origin": [-48, -9.8, -48],
+							"size": [96, 0, 96],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [96, 0]},
+								"east": {"uv": [0, 0], "uv_size": [96, 0]},
+								"south": {"uv": [0, 0], "uv_size": [96, 0]},
+								"west": {"uv": [0, 0], "uv_size": [96, 0]},
+								"up": {"uv": [0, 0], "uv_size": [96, 96]}
+							}
+						}
+					]
+				},
+				{
+					"name": "death_landing_vfx_cooldown",
+					"parent": "death_landing_vfx",
+					"pivot": [0, -9.9, 0],
+					"cubes": [
+						{
+							"origin": [-48, -9.9, -48],
+							"size": [96, 0, 96],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [96, 0]},
+								"east": {"uv": [0, 0], "uv_size": [96, 0]},
+								"south": {"uv": [0, 0], "uv_size": [96, 0]},
+								"west": {"uv": [0, 0], "uv_size": [96, 0]},
+								"up": {"uv": [0, 96], "uv_size": [96, 96]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

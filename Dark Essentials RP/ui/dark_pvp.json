@@ -1,0 +1,168 @@
+{
+    "namespace": "dark_pvp",
+    "pvp_root": {
+        "type": "panel",
+        "controls": [
+            {
+                "overlay": {
+                    "type": "image",
+                    "texture": "textures/ui/Black",
+                    "size": [10000, 10000],
+                    "alpha": 0.4
+                }
+            },
+            {
+                "body@dark_pvp.pvp_body_content": {}
+            }
+        ]
+    },
+    "pvp_body_content": {
+        "type": "panel",
+        "size": [300, 270],
+        "controls": [
+            {
+                "background": {
+                    "type": "image",
+                    "texture": "textures/darkesse/shop/header",
+                    "size": ["100%", "100%"]
+                }
+            },
+            {
+                "header": {
+                    "type": "panel",
+                    "size": ["100%", 40],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "controls": [
+                        {
+                            "background": {
+                                "type": "image",
+                                "texture": "textures/darkesse/shop/money_bg",
+                                "size": ["100%", "100%"]
+                            }
+                        },
+                        {
+                            "logo": {
+                                "type": "image",
+                                "texture": "textures/darkesse/menu/pvp",
+                                "size": [30, 30],
+                                "anchor_from": "left_middle",
+                                "anchor_to": "left_middle",
+                                "offset": [6, 0]
+                            }
+                        },
+                        {
+                            "div": {
+                                "type": "image",
+                                "texture": "textures/ui/white_background",
+                                "size": [3, "70%"],
+                                "anchor_from": "left_middle",
+                                "anchor_to": "left_middle",
+                                "offset": [42, 0],
+                                "nineslice_size": 2,
+                                "color": [0.455, 0.455, 0.455]
+                            }
+                        },
+                        {
+                            "title": {
+                                "type": "panel",
+                                "size": ["100% - 70px", 38],
+                                "anchor_from": "left_middle",
+                                "anchor_to": "left_middle",
+                                "offset": [52, 0],
+                                "controls": [
+                                    {
+                                        "stack": {
+                                            "type": "stack_panel",
+                                            "orientation": "vertical",
+                                            "size": ["100%", "100%"],
+                                            "controls": [
+                                                {
+                                                    "actual": {
+                                                        "type": "label",
+                                                        "text": "#title_text",
+                                                        "font_type": "MinecraftTen",
+                                                        "font_scale_factor": 2.4,
+                                                        "text_alignment": "left",
+                                                        "offset": [0, -1],
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#title_text"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "desc@preset.label_collection": {
+                                                        "$font_offset": [0, -7],
+                                                        "$collection_index": 0
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "close@preset.close_button": {
+                                "$tex_def": "textures/darkesse/shop/close_default",
+                                "$tex_hov": "textures/darkesse/shop/close_hover",
+                                "$tex_pre": "textures/darkesse/shop/close_default",
+                                "$tex_icon": "textures/darkesse/shop/close_x",
+                                "$anchor": "right_middle",
+                                "$offset": [-10, 0],
+                                "$size": [20, 20],
+                                "$icon_size": [14, 14]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "online_label": {
+                    "type": "panel",
+                    "size": [58, 18],
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "offset": [-4, 44],
+                    "controls": [
+                        {
+                            "bg": {
+                                "type": "image",
+                                "size": ["100%", "100%"],
+                                "texture": "textures/darkesse/shop/money_bg"
+                            }
+                        },
+                        {
+                            "txt@preset.label_collection": {
+                                "$collection_index": 1,
+                                "$text_alignment": "center",
+                                "$anchor": "center",
+                                "$text_anchor": "center"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "content": {
+                    "type": "panel",
+                    "size": ["100% - 8px", "100% - 70px"],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "offset": [0, 66],
+                    "controls": [
+                        {
+                            "bg": {
+                                "type": "image",
+                                "texture": "textures/darkesse/shop/money_bg",
+                                "size": ["100%", "100%"]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

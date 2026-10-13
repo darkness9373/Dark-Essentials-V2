@@ -1,0 +1,831 @@
+{
+    "namespace": "dark_main",
+    "main_root": {
+        "type": "panel",
+        "bindings": [
+            {
+                "binding_name": "#title_text"
+            }
+        ],
+        "controls": [
+            {
+                "overlay": {
+                    "type": "image",
+                    "size": [10000, 10000],
+                    "alpha": 0.4,
+                    "texture": "textures/ui/Black"
+                }
+            },
+            {
+                "body@dark_main.body_panel": {}
+            }
+        ]
+    },
+    "body_panel": {
+        "type": "panel",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "size": [300, 250],
+        "controls": [
+            {
+                "bg": {
+                    "type": "image",
+                    "size": ["100%", "100%"],
+                    "texture": "textures/darkesse/shop/header"
+                }
+            },
+            {
+                "header": {
+                    "type": "panel",
+                    "size": ["100%", 40],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "controls": [
+                        {
+                            "bg": {
+                                "type": "image",
+                                "size": ["100%", "100%"],
+                                "texture": "textures/darkesse/shop/money_bg"
+                            }
+                        },
+                        {
+                            "title_panel": {
+                                "type": "panel",
+                                "size": ["100%", 40],
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "controls": [
+                                    {
+                                        "logo": {
+                                            "type": "image",
+                                            "texture": "textures/darkesse/menu/chest",
+                                            "size": [32, 32],
+                                            "anchor_from": "left_middle",
+                                            "anchor_to": "left_middle",
+                                            "offset": [7, 0]
+                                        }
+                                    },
+                                    {
+                                        "div": {
+                                            "type": "image",
+                                            "texture": "textures/ui/white_background",
+                                            "nineslice_size": 2,
+                                            "size": [2, "70%"],
+                                            "anchor_from": "left_middle",
+                                            "anchor_to": "left_middle",
+                                            "offset": [44, 0],
+                                            "color": [0.5, 0.5, 0.5]
+                                        }
+                                    },
+                                    {
+                                        "title": {
+                                            "type": "label",
+                                            "text": "#title_text",
+                                            "font_scale_factor": 2.2,
+                                            "anchor_from": "top_left",
+                                            "anchor_to": "top_left",
+                                            "text_alignment": "left",
+                                            "font_type": "MinecraftTen",
+                                            "offset": [52, 0],
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#title_text"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "det": {
+                                            "type": "panel",
+                                            "size": [100, 16],
+                                            "anchor_from": "bottom_left",
+                                            "anchor_to": "bottom_left",
+                                            "offset": [52, -3],
+                                            "controls": [
+                                                {
+                                                    "tl@dark_main.title_detail_stack": {}
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "close": {
+                                            "type": "button",
+                                            "size": [20, 20],
+                                            "anchor_from": "right_middle",
+                                            "anchor_to": "right_middle",
+                                            "offset": [-10, 0],
+                                            "layer": 4,
+                                            "default_control": "def",
+                                            "hover_control": "hov",
+                                            "pressed_control": "pre",
+                                            "controls": [
+                                                {
+                                                    "def": {
+                                                        "type": "panel",
+                                                        "controls": [
+                                                            {
+                                                                "bg": {
+                                                                    "type": "image",
+                                                                    "size": [
+                                                                        20, 20
+                                                                    ],
+                                                                    "texture": "textures/darkesse/shop/close_default"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "hov": {
+                                                        "type": "panel",
+                                                        "controls": [
+                                                            {
+                                                                "bg": {
+                                                                    "type": "image",
+                                                                    "size": [
+                                                                        20, 20
+                                                                    ],
+                                                                    "texture": "textures/darkesse/shop/close_hover"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "pre": {
+                                                        "type": "panel",
+                                                        "controls": [
+                                                            {
+                                                                "bg": {
+                                                                    "type": "image",
+                                                                    "size": [
+                                                                        20, 20
+                                                                    ],
+                                                                    "texture": "textures/darkesse/shop/close_default"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "icon": {
+                                                        "type": "image",
+                                                        "texture": "textures/darkesse/shop/close_x",
+                                                        "size": [14, 14],
+                                                        "layer": 5,
+                                                        "anchor_from": "center",
+                                                        "anchor_to": "center"
+                                                    }
+                                                }
+                                            ],
+                                            "button_mappings": [
+                                                {
+                                                    "from_button_id": "button.menu_select",
+                                                    "to_button_id": "button.menu_exit",
+                                                    "mapping_type": "pressed"
+                                                }
+                                            ],
+                                            "sound_name": "random.click",
+                                            "sound_volume": 1,
+                                            "sound_pitch": 1
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "second": {
+                    "type": "panel",
+                    "size": ["100%", 40],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "offset": [0, 42],
+                    "controls": [
+                        {
+                            "bg": {
+                                "type": "image",
+                                "texture": "textures/darkesse/shop/money_bg",
+                                "size": ["100%", "100%"]
+                            }
+                        },
+                        {
+                            "icon": {
+                                "type": "image",
+                                "size": [30, 30],
+                                "anchor_from": "left_middle",
+                                "anchor_to": "left_middle",
+                                "offset": [6, 0],
+                                "texture": "textures/darkesse/menu/profile"
+                            }
+                        },
+                        {
+                            "name_role": {
+                                "type": "panel",
+                                "size": [100, 32],
+                                "anchor_from": "left_middle",
+                                "anchor_to": "left_middle",
+                                "offset": [40, 0],
+                                "controls": [
+                                    {
+                                        "name@dark_main.label_detail": {
+                                            "$anchor": "top_left",
+                                            "$offset": [0, 0],
+                                            "$collection_index": 1,
+                                            "$font_color": [1, 1, 1],
+                                            "$text_alignment": "left",
+                                            "$max_size": [100, 16]
+                                        }
+                                    },
+                                    {
+                                        "role@dark_main.label_detail": {
+                                            "$anchor": "bottom_left",
+                                            "$offset": [0, 0],
+                                            "$collection_index": 2,
+                                            "$font_color": [1, 1, 1],
+                                            "$text_alignment": "left"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "div": {
+                                "type": "image",
+                                "size": [3, "70%"],
+                                "anchor_from": "center",
+                                "anchor_to": "center",
+                                "offset": [15, 0],
+                                "texture": "textures/ui/white_background",
+                                "nineslice_size": 2,
+                                "color": [0.5, 0.5, 0.5]
+                            }
+                        },
+                        {
+                            "currency": {
+                                "type": "panel",
+                                "size": [110, 32],
+                                "offset": [-20, 0],
+                                "anchor_from": "right_middle",
+                                "anchor_to": "right_middle",
+                                "controls": [
+                                    {
+                                        "coin": {
+                                            "type": "stack_panel",
+                                            "orientation": "horizontal",
+                                            "anchor_from": "top_left",
+                                            "anchor_to": "top_left",
+                                            "size": ["100%", 16],
+                                            "controls": [
+                                                {
+                                                    "icon": {
+                                                        "type": "image",
+                                                        "size": [16, 16],
+                                                        "texture": "textures/darkesse/shop/coin"
+                                                    }
+                                                },
+                                                {
+                                                    "gap": {
+                                                        "type": "panel",
+                                                        "size": [5, 16]
+                                                    }
+                                                },
+                                                {
+                                                    "money@dark_main.label_detail": {
+                                                        "$collection_index": 3,
+                                                        "$size": ["fill", 16],
+                                                        "$font_color": [
+                                                            0.98, 0.89, 0.003
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prisma": {
+                                            "type": "stack_panel",
+                                            "orientation": "horizontal",
+                                            "anchor_from": "bottom_left",
+                                            "anchor_to": "bottom_left",
+                                            "size": ["100%", 16],
+                                            "controls": [
+                                                {
+                                                    "icon": {
+                                                        "type": "image",
+                                                        "size": [16, 16],
+                                                        "texture": "textures/darkesse/menu/prisma"
+                                                    }
+                                                },
+                                                {
+                                                    "gap": {
+                                                        "type": "panel",
+                                                        "size": [5, 16]
+                                                    }
+                                                },
+                                                {
+                                                    "prism@dark_main.label_detail": {
+                                                        "$collection_index": 4,
+                                                        "$size": ["fill", 16],
+                                                        "$font_color": [
+                                                            0.435, 0.803, 0.902
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "third": {
+                    "type": "panel",
+                    "size": ["100%", 40],
+                    "offset": [0, 84],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "controls": [
+                        {
+                            "menu_btn_row@dark_main.menu_btn_row": {
+                                "$btn1": 5,
+                                "$btn2": 7,
+                                "$label1": 6,
+                                "$label2": 8,
+                                "$size": ["50% - 1px", 40],
+                                "$gap": [2, 40]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "fourth": {
+                    "type": "panel",
+                    "size": ["100%", 40],
+                    "offset": [0, 126],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "controls": [
+                        {
+                            "menu_btn_row@dark_main.menu_btn_row": {
+                                "$btn1": 9,
+                                "$btn2": 11,
+                                "$label1": 10,
+                                "$label2": 12,
+                                "$size": ["50% - 1px", 40],
+                                "$gap": [2, 40]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "fifth": {
+                    "type": "panel",
+                    "size": ["100%", 40],
+                    "offset": [0, 168],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "controls": [
+                        {
+                            "menu_btn_row@dark_main.menu_btn_row": {
+                                "$btn1": 13,
+                                "$btn2": 15,
+                                "$label1": 14,
+                                "$label2": 16,
+                                "$size": ["50% - 1px", 40],
+                                "$gap": [2, 40]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "info": {
+                    "type": "panel",
+                    "size": ["100%", 40],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "offset": [0, 210],
+                    "controls": [
+                        {
+                            "bg": {
+                                "type": "image",
+                                "size": ["100%", "100%"],
+                                "texture": "textures/darkesse/shop/money_bg"
+                            }
+                        },
+                        {
+                            "icon": {
+                                "type": "image",
+                                "size": [28, 28],
+                                "texture": "textures/darkesse/menu/info",
+                                "anchor_from": "left_middle",
+                                "anchor_to": "left_middle",
+                                "offset": [6, 0]
+                            }
+                        },
+                        {
+                            "info": {
+                                "type": "stack_panel",
+                                "orientation": "vertical",
+                                "size": ["100% - 40px", "100%c"],
+                                "offset": [0, -2],
+                                "anchor_from": "right_middle",
+                                "anchor_to": "right_middle",
+                                "controls": [
+                                    {
+                                        "selamat@dark_main.label_detail": {
+                                            "$collection_index": 17,
+                                            "$size": ["100%", 14],
+                                            "$max_size": ["100%", 14],
+                                            "$font_scale": 1.4,
+                                            "$font_type": "MinecraftTen"
+                                        }
+                                    },
+                                    {
+                                        "gap": {
+                                            "type": "panel",
+                                            "size": ["100%", 1]
+                                        }
+                                    },
+                                    {
+                                        "detail@dark_main.label_detail": {
+                                            "$collection_index": 18,
+                                            "$size": ["100%", 10],
+                                            "$max_size": ["100%", 10]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "menu_btn_row": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "$btn1|default": 5,
+        "$label1|default": 6,
+        "$btn2|default": 7,
+        "$label2|default": 8,
+        "$gap|default": [4, 40],
+        "size": ["100%", 40],
+        "collection_name": "form_buttons",
+        "controls": [
+            {
+                "left_btn@dark_main.menu_btn": {
+                    "collection_index": "$btn1",
+                    "$label": "$label1"
+                }
+            },
+            {
+                "btn_gap": {
+                    "type": "panel",
+                    "size": "$gap"
+                }
+            },
+            {
+                "right_btn@dark_main.menu_btn": {
+                    "collection_index": "$btn2",
+                    "$label": "$label2"
+                }
+            }
+        ]
+    },
+    "menu_btn": {
+        "type": "button",
+        "$size|default": ["50% - 3px", 40],
+        "$label|default": 6,
+        "size": "$size",
+        "$pressed_button_name": "button.form_button_click",
+        "default_control": "def",
+        "hover_control": "hov",
+        "pressed_control": "press",
+        "button_mappings": [
+            {
+                "from_button_id": "button.menu_select",
+                "to_button_id": "$pressed_button_name",
+                "mapping_type": "pressed"
+            },
+            {
+                "from_button_id": "button.menu_ok",
+                "to_button_id": "$pressed_button_name",
+                "mapping_type": "focused"
+            }
+        ],
+        "controls": [
+            {
+                "def": {
+                    "type": "panel",
+                    "controls": [
+                        {
+                            "image": {
+                                "type": "image",
+                                "texture": "textures/darkesse/shop/money_bg",
+                                "size": ["100%", "100%"]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "hov": {
+                    "type": "panel",
+                    "controls": [
+                        {
+                            "image": {
+                                "type": "image",
+                                "texture": "textures/darkesse/shop/header",
+                                "size": ["100%", "100%"]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "press": {
+                    "type": "panel",
+                    "controls": [
+                        {
+                            "image": {
+                                "type": "image",
+                                "texture": "textures/darkesse/shop/money_bg",
+                                "size": ["100%", "100%"]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "icon_panel": {
+                    "type": "panel",
+                    "size": [32, 32],
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "offset": [4, 0],
+                    "layer": 2,
+                    "bindings": [
+                        {
+                            "binding_name": "#form_button_texture",
+                            "binding_type": "collection",
+                            "binding_collection_name": "form_buttons"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not (#form_button_texture = ''))",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "textures": {
+                                "type": "image",
+                                "size": [30, 30],
+                                "anchor_from": "center",
+                                "anchor_to": "center",
+                                "bindings": [
+                                    {
+                                        "binding_name": "#form_button_texture",
+                                        "binding_name_override": "#texture",
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(('%.8s' * #texture) = 'textures')",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "aux_item": {
+                                "type": "custom",
+                                "renderer": "inventory_item_renderer",
+                                "size": [34, 34],
+                                "anchor_from": "center",
+                                "anchor_to": "center",
+                                "bindings": [
+                                    {
+                                        "binding_name": "#form_button_texture",
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(not ((#form_button_texture = '') or (('%.8s' * #form_button_texture) = 'textures')))",
+                                        "target_property_name": "#visible"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(#form_button_texture - '§a§u§x')",
+                                        "target_property_name": "#item_id_aux"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "label": {
+                    "type": "label",
+                    "text": "#form_button_text",
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "offset": [40, 4],
+                    "text_alignment": "left",
+                    "font_scale_factor": 1.8,
+                    "layer": 1,
+                    "font_type": "MinecraftTen",
+                    "color": [1, 1, 1],
+                    "bindings": [
+                        {
+                            "binding_name": "#form_button_text",
+                            "binding_type": "collection",
+                            "binding_collection_name": "form_buttons"
+                        }
+                    ]
+                }
+            },
+            {
+                "sub_wrap": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "size": ["100% - 40px", 16],
+                    "anchor_from": "bottom_left",
+                    "anchor_to": "bottom_left",
+                    "offset": [40, -5],
+                    "layer": 1,
+                    "collection_name": "form_buttons",
+                    "controls": [
+                        {
+                            "sub@dark_main.sub_label": {
+                                "collection_index": "$label"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "sound_name": "random.click",
+        "sound_volume": 1,
+        "sound_pitch": 1,
+        "bindings": [
+            {
+                "binding_type": "collection_details",
+                "binding_collection_name": "form_buttons"
+            }
+        ]
+    },
+    "sub_label": {
+        "type": "panel",
+        "size": ["100%", "100%"],
+        "bindings": [
+            {
+                "binding_type": "collection_details",
+                "binding_collection_name": "form_buttons"
+            }
+        ],
+        "controls": [
+            {
+                "label": {
+                    "type": "label",
+                    "text": "#form_button_text",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "text_alignment": "left",
+                    "font_scale_factor": 1,
+                    "color": [0.9, 0.9, 0.9],
+                    "bindings": [
+                        {
+                            "binding_name": "#form_button_text",
+                            "binding_type": "collection",
+                            "binding_collection_name": "form_buttons"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "title_detail_stack": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "size": ["100%", "100%"],
+        "collection_name": "form_buttons",
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "controls": [
+            {
+                "title_detail@dark_main.title_detail_panel": {
+                    "collection_index": 0
+                }
+            }
+        ]
+    },
+    "title_detail_panel": {
+        "type": "panel",
+        "size": ["100%", "100%"],
+        "bindings": [
+            {
+                "binding_type": "collection_details",
+                "binding_collection_name": "form_buttons"
+            }
+        ],
+        "controls": [
+            {
+                "label": {
+                    "type": "label",
+                    "text": "#form_button_text",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "text_alignment": "left",
+                    "font_scale_factor": 1,
+                    "color": [0.9, 0.9, 0.9],
+                    "bindings": [
+                        {
+                            "binding_name": "#form_button_text",
+                            "binding_type": "collection",
+                            "binding_collection_name": "form_buttons"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "label_detail": {
+        "type": "panel",
+        "$size|default": [100, 16],
+        "$anchor|default": "center",
+        "$offset|default": [0, 0],
+        "$collection_index|default": 0,
+        "$text_anchor|default": "left_middle",
+        "$text_alignment|default": "center",
+        "$font_scale|default": 1,
+        "$font_type|default": "default",
+        "$font_color|default": [1, 1, 1],
+        "$font_offset|default": [0, 0],
+        "$max_size|default": [100, 16],
+        "size": "$size",
+        "anchor_from": "$anchor",
+        "anchor_to": "$anchor",
+        "offset": "$offset",
+        "controls": [
+            {
+                "detail_stack": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "size": ["100%", "100%"],
+                    "collection_name": "form_buttons",
+                    "controls": [
+                        {
+                            "detail_panel": {
+                                "type": "panel",
+                                "size": ["100%", "100%"],
+                                "collection_index": "$collection_index",
+                                "bindings": [
+                                    {
+                                        "binding_type": "collection_details",
+                                        "binding_collection_name": "form_buttons"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "label": {
+                                            "type": "label",
+                                            "text": "#form_button_text",
+                                            "anchor_from": "$text_anchor",
+                                            "anchor_to": "$text_anchor",
+                                            "text_alignment": "$text_alignment",
+                                            "font_scale_factor": "$font_scale",
+                                            "color": "$font_color",
+                                            "font_type": "$font_type",
+                                            "max_size": "$max_size",
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#form_button_text",
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "form_buttons"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

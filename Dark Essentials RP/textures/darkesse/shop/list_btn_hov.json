@@ -1,0 +1,5 @@
+{
+    "$schema": "https://kalmemarq.github.io/Bugrock-JSON-UI-Schemas/ui.sprite.schema.json",
+    "base_size": [32, 32],
+    "nineslice_size": [10, 10, 10, 10]
+}

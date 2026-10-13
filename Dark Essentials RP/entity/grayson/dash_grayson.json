@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "custom:dash_grayson",
+      "materials": {
+        "default": "enderman"
+      },
+      "textures": {
+        "hdoom1": "textures/entity/slash/kosongg",
+        "hdoom2": "textures/entity/slash/kosongg",
+        "hdoom3": "textures/entity/slash/kosongg",
+        "hdoom4": "textures/entity/grayson_katana/dash_1",
+        "hdoom5": "textures/entity/grayson_katana/dash_2",
+        "hdoom6": "textures/entity/grayson_katana/dash_3",
+        "hdoom7": "textures/entity/grayson_katana/dash_4",
+        "hdoom8": "textures/entity/slash/kosongg",
+        "hdoom9": "textures/entity/slash/kosongg",
+        "hdoom10": "textures/entity/slash/kosongg",
+        "hdoom11": "textures/entity/slash/kosongg",
+        "hdoom12": "textures/entity/slash/kosongg"
+      },
+      "geometry": {
+        "baelroth": "geometry.dash_grayson"
+      },
+      "render_controllers": [
+        "controller.render.baelrothslash"
+      ]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "custom:glacivon_impact",
+      "materials": {
+        "default": "enderman"
+      },
+      "textures": {
+        "hdoom1": "textures/entity/glacivon_fist/glacivon_impact1",
+        "hdoom2": "textures/entity/glacivon_fist/glacivon_impact2",
+        "hdoom3": "textures/entity/glacivon_fist/glacivon_impact3",
+        "hdoom4": "textures/entity/glacivon_fist/glacivon_impact4",
+        "hdoom5": "textures/entity/glacivon_fist/glacivon_impact5",
+        "hdoom6": "textures/entity/slash/kosongg",
+        "hdoom7": "textures/entity/slash/kosongg",
+        "hdoom8": "textures/entity/slash/kosongg",
+        "hdoom9": "textures/entity/slash/kosongg",
+        "hdoom10": "textures/entity/slash/kosongg",
+        "hdoom11": "textures/entity/slash/kosongg",
+        "hdoom12": "textures/entity/slash/kosongg"
+      },
+      "geometry": {
+        "baelroth": "geometry.glacivon_impact"
+      },
+      "scripts": {
+				"animate": [
+					"controller"
+				]
+			},
+			"animations": {
+				"controller": "controller.animation.chain.general",
+				"spawned": "animation.glacivon_impact"
+	  },
+      "render_controllers": [
+        "controller.render.baelrothslash"
+      ]
+    }
+  }
+}

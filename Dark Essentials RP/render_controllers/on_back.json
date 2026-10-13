@@ -1,0 +1,24 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.on_back": {
+			"arrays": {
+				"textures": {
+					"array.textures": [
+						"texture.default"
+					]
+				}
+			},
+			"geometry": "Geometry.on_back",
+			"materials": [
+				{
+					"*": "variable.is_enchanted?material.enchanted:material.default"
+				}
+			],
+			"textures": [
+				"temp.life_time=query.life_time*10;return array.textures[temp.life_time];",
+				"texture.enchanted"
+			]
+		}
+	}
+}

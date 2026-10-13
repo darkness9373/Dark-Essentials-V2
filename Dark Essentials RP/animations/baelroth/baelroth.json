@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.baelroth.tpp": {
+			"loop": true,
+			"bones": {
+				"group": {
+					"rotation": [90.12247, -7.43464, -90.99713],
+					"position": [0, 6, 13]
+				}
+			}
+		},
+		"animation.baelroth.fpp": {
+			"loop": true,
+			"bones": {
+				"group": {
+					"rotation": [33.129, -27.06807, -155.58658],
+					"position": [18, 28, 18]
+				}
+			}
+		}
+	}
+}

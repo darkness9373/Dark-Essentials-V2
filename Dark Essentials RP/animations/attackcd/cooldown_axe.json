@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.cooldown.axe": {
+			"animation_length": 1.0625,
+			"bones": {
+				"rightArm": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.125": [0, -20, 0],
+						"1.0": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

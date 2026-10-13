@@ -1,0 +1,37 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.cracek",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 12,
+				"visible_bounds_height": 6,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [43.30128, 0, -43.30128],
+					"cubes": [
+						{
+							"origin": [-0.22, -82.61495, -83.89623],
+							"size": [0.44, 167.79246, 167.79246],
+							"pivot": [0, 1.28128, 0],
+							"rotation": [90, 0, 90],
+							"uv": {
+								"north": {"uv": [16, 0], "uv_size": [0, 0]},
+								"east": {"uv": [0.032, 0.032], "uv_size": [15.968, 15.968]},
+								"south": {"uv": [16, 0], "uv_size": [0, 0]},
+								"west": {"uv": [16, 16], "uv_size": [-15.968, 0]},
+								"up": {"uv": [16, 0], "uv_size": [0, 0]},
+								"down": {"uv": [16, 0], "uv_size": [-0.22491, 0]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

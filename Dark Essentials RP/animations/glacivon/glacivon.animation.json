@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.glacivon.fpp": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"rotation": [-23.25716, 26.25372, -107.40928],
+					"position": [7, 0, 0]
+				}
+			}
+		},
+		"animation.glacivon.tpp": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"rotation": [0, 90, -22.5],
+					"position": [0, -5, -1]
+				}
+			}
+		}
+	}
+}
